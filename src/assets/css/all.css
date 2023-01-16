@@ -6344,7 +6344,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
+  /* src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype");  */
+}
 
 .fab,
 .fa-brands {
@@ -7829,3 +7830,39 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("../fonts/FontAwesome/fa-v4compatibility.woff2") format("woff2"), url("../fonts/FontAwesome/fa-v4compatibility.ttf") format("truetype");
   unicode-range: U+F041,U+F047,U+F065-F066,U+F07D-F07E,U+F080,U+F08B,U+F08E,U+F090,U+F09A,U+F0AC,U+F0AE,U+F0B2,U+F0D0,U+F0D6,U+F0E4,U+F0EC,U+F10A-F10B,U+F123,U+F13E,U+F148-F149,U+F14C,U+F156,U+F15E,U+F160-F161,U+F163,U+F175-F178,U+F195,U+F1F8,U+F219,U+F250,U+F252,U+F27A; }
+
+  /* body {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+} */
+.theme-btn {
+  background-image: url('../images/button-shape.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0px;
+  padding: 20px 23px;
+  font-size: 16px;
+  font-family: 'clashregular';
+  line-height: 8px;
+  color: white !important;
+}
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+}
+.text-light {
+  color: #f8f9fa!important;
+  font-family: 'clashregular';
+}

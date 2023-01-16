@@ -17,8 +17,8 @@
     }
     body {       
         background-size: cover;
-        /*background-image:url(../images/admin_bg.jpg);*/
-        background-color: #140e38;   
+        /* background-image:url(/src/assets/images/admin-bg.jpg); */
+        background-color: #000000;   
         background-repeat: no-repeat;  
         font-family: 'clashregular';
     } 

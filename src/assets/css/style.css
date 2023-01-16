@@ -23,6 +23,7 @@
         background-repeat: no-repeat;  
         font-family: 'clashregular';
     } 
+ 
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
       font-family: 'clashregular';
     }
@@ -465,6 +466,7 @@
       transform: translatey(-50%);
       color: #33cb33;
       font-weight: bold;
+      font-family: 'clashregular';
     }
 
     .counterup_text {
