@@ -6791,7 +6791,7 @@ button {
 .card .card-body,
 .card .card-footer,
 .card .card-header {
-    padding: var(--card-spacing)
+    /* padding: var(--card-spacing) */
 }
 
 .card .half-padding.card-body,
@@ -7507,7 +7507,7 @@ button {
 .dropend .dropdown-toggle::after,
 .dropstart .dropdown-toggle::before,
 .dropup .dropdown-toggle::after {
-    width: 5px;
+    width: 9px !important;
     height: 5px;
     border: initial;
     /* transform: rotate(45deg); */
@@ -7652,7 +7652,8 @@ textarea.form-control {
 
 .col-form-label,
 .form-label {
-    color: var(--alternate)
+    color: var(--alternate);
+    font-size:16px !important
 }
 
 .form-control-muted {
@@ -9914,7 +9915,7 @@ div.dataTables_wrapper table.dataTable thead :before {
 
 div.dataTables_wrapper table.dataTable thead .sorting_asc,
 div.dataTables_wrapper table.dataTable thead .sorting_desc {
-    color: var(--alternate) !important
+    /* color: var(--alternate) !important */
 }
 
 div.dataTables_wrapper table.dataTable thead .sorting:after,
@@ -13922,7 +13923,7 @@ body {
 }
 .dropdown-toggle::after {
     /* display: inline-block; */
-    margin-left: .755em;
+    margin-left: .655em;
     /* vertical-align: .255em; */
     content: "";
     color: white;

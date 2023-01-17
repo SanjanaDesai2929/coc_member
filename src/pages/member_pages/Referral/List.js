@@ -97,7 +97,7 @@ const List = () => {
                                     <form class="form-valide-with-icon" name="check_user" id="check_user" method="post" action="https://developerinfotech.com/demo/rtvk/ci_admin_api/">
                                         <div class="mb-3 w-100">
                                             <label for="level" class="form-label" style={{ fontFamily: "clashregular" }}>Level</label>
-                                            <select class="form-control select-single-no-search" name="level" id="level" style={{ fontFamily: "clashregular" }} onChange={handleChange}>
+                                            <select class="form-control select-single-no-search" name="level" id="level" style={{ fontFamily: "clashregular",height:"65px",fontSize:"16px" }} onChange={handleChange}>
                                                 <option value="1"> Level - 1 </option>
                                                 <option value="2"> Level - 2 </option>
 
@@ -125,12 +125,12 @@ const List = () => {
                                         <table class="table table-striped datatable-values mt-1 manage_tbl dataTable no-footer" id="manage_tbl">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-muted text-medium border-0 text-center sorting_disabled" rowspan="1" colspan="1" aria-label="SR">SR</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Username: activate to sort column ascending">Username</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Full Name: activate to sort column ascending">Full Name</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Investment</th>
-                                                    <th class="text-muted text-medium border-0 sorting_disabled" rowspan="1" colspan="1" aria-label="Activation Date">Activation Date</th>
-                                                    {/* <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Registration Date: activate to sort column ascending">Registration Date</th> */}
+                                                    <th class="text-muted  border-0 text-center sorting_disabled" rowspan="1" colspan="1" aria-label="SR">SR</th>
+                                                    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Username: activate to sort column ascending">Username</th>
+                                                    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Full Name: activate to sort column ascending">Full Name</th>
+                                                    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Investment</th>
+                                                    <th class="text-muted  border-0 sorting_disabled" rowspan="1" colspan="1" aria-label="Activation Date">Activation Date</th>
+                                                    {/* <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Registration Date: activate to sort column ascending">Registration Date</th> */}
                                                 </tr>
                                             </thead>
                                             <tbody>

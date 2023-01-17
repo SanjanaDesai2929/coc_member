@@ -49,19 +49,19 @@ const MemberTheme = (props) => {
                                         <ul aria-labelledby="referral" class={`dropdown-menu ${window.location.pathname=="/trafficflow/referral_list" || window.location.pathname=="/referral" || window.location.pathname=="/trafficflow/referral_form" ? "show":""}  `}>
                                             <li class={`${window.location.pathname=="/trafficflow/referral_list" ? "active":""}`}>
                                                 <NavLink to="/trafficflow/referral_list" class="dropdown-item">
-                                                    <span class="label">List</span>
+                                                    <span class="label1">List</span>
                                                 </NavLink>
                                             </li>
                                             <li class={`${window.location.pathname=="/referral" ? "active":""}`}>
 
                                                 <NavLink to="/referral" class="dropdown-item">
-                                                    <span class="label">Link</span>
+                                                    <span class="label1">Link</span>
                                                 </NavLink>
                                             </li>
                                             <li class={`${window.location.pathname=="/trafficflow/referral_form" ? "active":""}`}>
 
                                                 <NavLink to="/trafficflow/referral_form" class="dropdown-item">
-                                                    <span class="label">Add New</span>
+                                                    <span class="label1">Add New</span>
                                                 </NavLink>
                                             </li>
                                         </ul>
