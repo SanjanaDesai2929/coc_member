@@ -18,23 +18,9 @@ const MemberTheme = (props) => {
             $('.nav-close').toggleClass('open');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
-        $('#datatable').DataTable({
-            dom: 'lBfrtip',
-            language: {
-                search: "",
-                searchPlaceholder: "Type something..."
-            },
-            oLanguage: {
-                oPaginate: {
-                    sNext: '<span class="pagination-default"></span><span class="pagination-fa"><i class="fa fa-chevron-right" ></i></span>',
-                    sPrevious: '<span class="pagination-default"></span><span class="pagination-fa"><i class="fa fa-chevron-left" ></i></span>'
-                }
-            }
-        });
-        $('#datatable').on('click', '.actions', function () {
-            $(this).next('.actions-toggle').toggle();
-        });
+        
     });
+    console.log(window.location.pathname);
     return (
         <>
             <div class="main-wrapper">
@@ -49,30 +35,32 @@ const MemberTheme = (props) => {
                                     </button>
                                 </div>
                                 <ul class="list-unstyled components">
-                                    <li class=" active">
-                                        <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/dashboard">
+                                    <li class={`${window.location.pathname=="/dashboard" ? "active":""}`}>
+                                        <NavLink to="/dashboard">
                                             <i class="fa-solid fa-chart-area pe-2"></i>
                                             <span class="label">Dashboard</span>
                                         </NavLink>
                                     </li>
-                                    <li class="dropdown ">
-                                        <a id="referral" href="#" class="dropdown-toggle" role="button" data-href="https://developerinfotech.com/demo/rtvk/ci_admin_api/trafficflow/referral_list" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <li class={`dropdown ${window.location.pathname=="/trafficflow/referral_list" || window.location.pathname=="/referral" || window.location.pathname=="/trafficflow/referral_form" ? "active":""}`}>
+                                        <a id="referral" href="#" class= {` dropdown-toggle ${window.location.pathname=="/trafficflow/referral_list" || window.location.pathname=="/referral" || window.location.pathname=="/trafficflow/referral_form" ? "show":""} `} role="button" data-href="/trafficflow/referral_list" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fa-solid fa-users pe-2"></i>
                                             <span class="label">Referrals</span>
                                         </a>
-                                        <ul aria-labelledby="referral" class="dropdown-menu ">
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/trafficflow/referral_list" class="dropdown-item">
+                                        <ul aria-labelledby="referral" class={`dropdown-menu ${window.location.pathname=="/trafficflow/referral_list" || window.location.pathname=="/referral" || window.location.pathname=="/trafficflow/referral_form" ? "show":""}  `}>
+                                            <li class={`${window.location.pathname=="/trafficflow/referral_list" ? "active":""}`}>
+                                                <NavLink to="/trafficflow/referral_list" class="dropdown-item">
                                                     <span class="label">List</span>
                                                 </NavLink>
                                             </li>
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/referral" class="dropdown-item">
+                                            <li class={`${window.location.pathname=="/referral" ? "active":""}`}>
+
+                                                <NavLink to="/referral" class="dropdown-item">
                                                     <span class="label">Link</span>
                                                 </NavLink>
                                             </li>
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/trafficflow/referral_form" class="dropdown-item">
+                                            <li class={`${window.location.pathname=="/trafficflow/referral_form" ? "active":""}`}>
+
+                                                <NavLink to="/trafficflow/referral_form" class="dropdown-item">
                                                     <span class="label">Add New</span>
                                                 </NavLink>
                                             </li>

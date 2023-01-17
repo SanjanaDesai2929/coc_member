@@ -6778,7 +6778,7 @@ button {
 }
 
 .card {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .03) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .03) ;
     background: var(--foreground);
     border-radius: var(--border-radius-lg);
     border: initial
@@ -7530,9 +7530,9 @@ button {
     transform: rotate(-45deg)
 }
 
-.dropdown-toggle.show::after {
+/* .dropdown-toggle.show::after {
     transform: rotate(135deg)
-}
+} */
 
 .dropdown-toggle[data-bs-toggle=collapse]:not(.collapsed)::after {
     transform: rotate(135deg)
@@ -14025,7 +14025,7 @@ h6 {
     font-family: var(--font-heading);
     font-weight: 400;
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 2rem;
     color: var(--primary);
     height: var(--small-title-height)
 }

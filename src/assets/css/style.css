@@ -29,6 +29,7 @@
     }
     select option{
       color: #000000 !important;
+      font-family:"clashregular" !important;
     }
     :root{
       --primary-color: #140e38;
@@ -51,11 +52,11 @@
     .purple-box{
       position: relative;
       background: #09002a4f;
-      border-radius: 20px;
-      border: 4px solid #2e2920;
+      border-radius: 20px !important;
+      border: 4px solid #2e2920 !important;
       /*border: 4px solid #281e4d;*/
       /*border: 4px solid #D58900;*/
-      box-shadow: 2px 2px 5px #d58900;
+      box-shadow: 2px 2px 5px #d58900 !important;
     } 
 .bg-opacity-1{
   background: #09002a;
@@ -676,13 +677,13 @@
   .form_input select,#manage_tbl_wrapper input,
   .form_input input {
     width: 100%;
-    height: 62px;
+    height: 62px !important;
     padding: 0 25px;
     line-height: 17px;
     color: #ffffff;
     background: inherit;
-    border: 2px solid #b154f040;
-    border-radius: 10px;
+    border: 2px solid #b154f040 !important;
+    border-radius: 10px !important;
   }
   .form-control[type="file"]{
     padding: 0;

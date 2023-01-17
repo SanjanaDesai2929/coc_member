@@ -7866,3 +7866,9 @@ readers do not read off random characters that represent icons */
   color: #f8f9fa!important;
   font-family: 'clashregular';
 }
+@media (min-width: 1200px){
+
+  .h2, h2 {
+      font-size: 2rem;
+  }
+}
