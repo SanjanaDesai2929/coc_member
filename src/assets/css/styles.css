@@ -7754,13 +7754,7 @@ textarea.form-control {
     margin-top: 4px
 }
 
-.form-control:disabled,
-.form-control[readonly] {
-    background: rgba(var(--separator-rgb), .5) !important;
-    border-color: rgba(var(--separator-rgb), .5) !important;
-    color: var(--muted);
-    -webkit-text-fill-color: var(--muted) !important
-}
+
 
 .form-control:disabled~span {
     background: 0 0 !important

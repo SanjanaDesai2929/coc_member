@@ -593,7 +593,7 @@
     z-index: 1;
   }
   .breadcrumb-row{
-    margin-bottom: 45px;
+    /* margin-bottom: 45px; */
   }
   .breadcrumb-title{
     line-height: 38px;

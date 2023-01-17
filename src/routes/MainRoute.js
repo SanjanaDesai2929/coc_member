@@ -11,8 +11,11 @@ import SuperResources from '../pages/member_pages/Income/SuperResources';
 import LeagueReward from '../pages/member_pages/Income/LeagueReward';
 import ClansLeagueRewards from '../pages/member_pages/Income/ClansLeagueRewards';
 import ReferralRevenue from '../pages/member_pages/Income/ReferralRevenue';
+import Statement from '../pages/member_pages/Statement/Statement'
+import Withdraw from '../pages/member_pages/Withdraw/Withdraw'
 
 const MainRoute = () => {
+
  
  
 // Member Routing 
@@ -21,7 +24,6 @@ const MainRoute = () => {
     { path: "/trafficflow/referral_list", element: <List /> },
     { path: "/referral", element: <LinkPage /> },
     { path: "/trafficflow/referral_form", element: <AddNew /> },
-    { path: "/editprofile" , element: <EditProfile />},
     { path: "/add_balance" , element: <InvestNow />},
     { path: "/account/roi_income" , element: <DailyTreasure />},
     { path: "/account/team_revenue" , element: <SuperResources />},
@@ -29,8 +31,9 @@ const MainRoute = () => {
     { path: "/account/league_reward" , element: <LeagueReward />},
     { path: "/account/clan_league_rewards" , element: <ClansLeagueRewards />},
 
-
-    
+    { path: "/profile" , element: <EditProfile />},
+    { path: "/account/statement" , element: <Statement />},
+    { path:"/withdrawal",element:<Withdraw /> }
     
   ])
   return routes
