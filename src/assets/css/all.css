@@ -7888,6 +7888,7 @@ readers do not read off random characters that represent icons */
 #manage_tbl_length{
   font-family: "clashregular";
   margin-bottom: 20px;
+  font-size: 16px;
   /* width:10px; */
 }
 .dataTables_filter input{
@@ -7907,4 +7908,7 @@ readers do not read off random characters that represent icons */
   border-radius: 5px !important;
   padding: 5px 12px 3px;
   border: 1px solid transparent;
+}
+.text-muted {
+  color: #6c757d!important;
 }
