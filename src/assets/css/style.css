@@ -593,7 +593,7 @@
     z-index: 1;
   }
   .breadcrumb-row{
-    margin-bottom: 45px;
+    /* margin-bottom: 45px; */
   }
   .breadcrumb-title{
     line-height: 38px;
@@ -670,7 +670,8 @@
   .form_input select,#manage_tbl_wrapper input,
   .form_input input {
     width: 100%;
-    height: 50px !important;
+    /* height: 50px !important; */
+    height: 62px;
     padding: 0 25px;
     line-height: 17px;
     color: #ffffff;
