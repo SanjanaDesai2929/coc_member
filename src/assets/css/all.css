@@ -7900,3 +7900,27 @@ readers do not read off random characters that represent icons */
 .text-muted {
   color: #6c757d!important;
 }
+.alert-warning {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+  font-family: "clashregular";
+  font-size: 1rem;
+
+}
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+.alert-info {
+  color: #055160 !important;
+  background-color: #cff4fc !important;
+  border-color: #b6effb !important;
+  font-family: "clashregular";
+  font-size: 1rem;
+
+
+}
