@@ -306,6 +306,7 @@
     }
     .card-header img.queen{
       left: -50px;
+      top:-65px;
       position: absolute;
       bottom: -35px;
     }
@@ -785,6 +786,7 @@
       }
       .card-header img.queen {
         left: -38px;
+     
       }
       .breadcrumb-title {
         font-size: 20px;
