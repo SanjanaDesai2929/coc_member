@@ -66,65 +66,70 @@ const MemberTheme = (props) => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class=" ">
-                                        <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/subscriber/add_balance">
+                                    <li class={`${window.location.pathname=="/add_balance" ? "active":""}`}>
+                                        <NavLink to="/add_balance">
                                             <i class="fa-solid fa-download pe-2"></i>
                                             <span class="label">Invest Now</span>
                                         </NavLink>
                                     </li>
-                                    <li class="dropdown ">
-                                        <a id="incomes" href="#" class="dropdown-toggle" role="button" data-href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/roi_income" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <li class={`dropdown ${window.location.pathname=="/account/roi_income" || window.location.pathname=="/account/team_revenue" || window.location.pathname=="/account/referral_revenue" || window.location.pathname=="/account/league_reward"||window.location.pathname=="/account/clan_league_rewards" ? "active":""}`}>
+
+                                        <a id="incomes" href="#" class="dropdown-toggle" role="button" data-href="/account/roi_income" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fa-solid fa-table-list pe-2"></i>
                                             <span class="label">Incomes</span>
                                         </a>
                                         <ul aria-labelledby="referral" class="dropdown-menu ">
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/roi_income" class="dropdown-item">
+                                        <li class={`${window.location.pathname=="/account/roi_income" ? "active":""}`}>
+                                                <NavLink to="/account/roi_income" class="dropdown-item">
                                                     <span class="label">Daily Treasure</span>
                                                 </NavLink>
                                             </li>
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/team_revenue" class="dropdown-item">
+                                            <li class={`${window.location.pathname=="/account/team_revenue" ? "active":""}`}>
+
+                                                <NavLink to="/account/team_revenue" class="dropdown-item">
                                                     <span class="label">Super Resources</span>
                                                 </NavLink>
                                             </li>
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/referral_revenue" class="dropdown-item">
+                                            <li class={`${window.location.pathname=="/account/referral_revenue" ? "active":""}`}>
+
+                                                <NavLink to="/account/referral_revenue" class="dropdown-item">
                                                     <span class="label">Referral Revenue</span>
                                                 </NavLink>
                                             </li>
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/league_reward" class="dropdown-item">
+                                            <li class={`${window.location.pathname=="/account/league_reward" ? "active":""}`}>
+
+                                                <NavLink to="/account/league_reward" class="dropdown-item">
                                                     <span class="label">League Reward</span>
                                                 </NavLink>
                                             </li>
-                                            <li class=" ">
-                                                <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/clan_league_rewards" class="dropdown-item">
+                                            <li class={`${window.location.pathname=="/account/clan_league_rewards" ? "active":""}`}>
+
+                                                <NavLink to="/account/clan_league_rewards" class="dropdown-item">
                                                     <span class="label">Clan League Rewards</span>
                                                 </NavLink>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class=" ">
-                                        <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/withdrawal">
+                                    <li class={`${window.location.pathname=="/withdrawal" ? "active":""}`}>
+                                        <NavLink to="/withdrawal">
                                             <i class="fa-solid fa-upload pe-2"></i>
                                             <span class="label">Withdrawal</span>
                                         </NavLink>
                                     </li>
-                                    <li class=" ">
-                                        <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/statement">
+                                    <li class={`${window.location.pathname=="/account/statement" ? "active":""}`}>
+                                        <NavLink to="/account/statement">
                                             <i class="fa-solid fa-table-list pe-2"></i>
                                             <span class="label">Statement</span>
                                         </NavLink>
                                     </li>
-                                    <li class=" ">
-                                        <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/profile" style={{ color: "white" }}>
+                                    <li class={`${window.location.pathname=="/profile" ? "active":""}`}>
+                                        <NavLink to="/profile" style={{ color: "white" }}>
                                             <i class="fa-solid fa-user pe-2"></i>
                                             <span class="label">Edit Profile</span>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="https://developerinfotech.com/demo/rtvk/ci_admin_api/login/logout" style={{ color: "white" }}>
+                                        <NavLink to="/login/logout" style={{ color: "white" }}>
                                             <i class="fa-solid fa-sign-out pe-2"></i>
                                             <span class="label">Logout</span>
                                         </NavLink>
@@ -151,8 +156,8 @@ const MemberTheme = (props) => {
                                                         </div>
                                                     </button>
                                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                                        <li><a class="dropdown-item" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/profile" style={{ color: "white" }}>Edit Profile</a></li>
-                                                        <li><a class="dropdown-item" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/login/logout" style={{ color: "white" }}>Logout</a></li>
+                                                        <li><a class="dropdown-item" href="/profile" style={{ color: "white" }}>Edit Profile</a></li>
+                                                        <li><a class="dropdown-item" href="/login/logout" style={{ color: "white" }}>Logout</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -189,8 +194,8 @@ const MemberTheme = (props) => {
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                                                    <li><a class="dropdown-item" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/profile" style={{ color: "white" }}>Edit Profile</a></li>
-                                                                    <li><a class="dropdown-item" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/login/logout" style={{ color: "white" }}>Logout</a></li>
+                                                                    <li><a class="dropdown-item" href="/profile" style={{ color: "white" }}>Edit Profile</a></li>
+                                                                    <li><a class="dropdown-item" href="/login/logout" style={{ color: "white" }}>Logout</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
