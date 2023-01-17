@@ -4,7 +4,8 @@ import "jquery/dist/jquery.js"
 import "./assets/css/style.css"
 import "./assets/css/styles.css"
 import "./assets/css/main.css"
-
+import 'datatables.net';
+import 'datatables.net-dt/css/jquery.dataTables.css';
 // import "./assets/css/style_.css"
 import "./assets/css/all.css"
 import {

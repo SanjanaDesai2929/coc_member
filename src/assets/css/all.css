@@ -7872,3 +7872,27 @@ readers do not read off random characters that represent icons */
       font-size: 2rem;
   }
 }
+
+#manage_tbl_length{
+  font-family: "clashregular";
+  margin-bottom: 20px;
+  /* width:10px; */
+}
+.dataTables_filter input{
+  font-family: "clashregular";
+
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #fff !important;
+  background: #3ebdfb !important;
+  border-color: #3ebdfb !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #fff !important;
+  background: #fff0;
+  font-weight: bold;
+  margin: 0 6px;
+  border-radius: 5px !important;
+  padding: 5px 12px 3px;
+  border: 1px solid transparent;
+}
