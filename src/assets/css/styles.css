@@ -7754,13 +7754,7 @@ textarea.form-control {
     margin-top: 4px
 }
 
-.form-control:disabled,
-.form-control[readonly] {
-    background: rgba(var(--separator-rgb), .5) !important;
-    border-color: rgba(var(--separator-rgb), .5) !important;
-    color: var(--muted);
-    -webkit-text-fill-color: var(--muted) !important
-}
+
 
 .form-control:disabled~span {
     background: 0 0 !important
@@ -14023,9 +14017,9 @@ h6 {
 }
 
 .small-title {
-    font-family: var(--font-heading);
+    font-family:'clashregular' ;
     font-weight: 400;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     font-size: 2rem;
     color: var(--primary);
     height: var(--small-title-height)

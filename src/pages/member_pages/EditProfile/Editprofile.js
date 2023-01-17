@@ -448,29 +448,7 @@ const {
                                         <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>League Reward:</strong></p>
                                     </div>
 
-                                    {/* <img src="<?php echo $this->template_images; ?>unranked_1.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Unranked</h2>
-                                        <img src="<?php echo $this->template_images; ?>bronze_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Rank 1</h2>
-                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Rank 2</h2>
-                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Bronze</h2>
-                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Silver</h2>
-                                        <img src="<?php echo $this->template_images; ?>gold_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Gold</h2>
-                                        <img src="<?php echo $this->template_images; ?>crystal_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Crystal</h2>
-                                        <img src="<?php echo $this->template_images; ?>master_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Master</h2>
-                                        <img src="<?php echo $this->template_images; ?>champion_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Champion</h2>
-                                        <img src="<?php echo $this->template_images; ?>titan_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Titan</h2>
-                                        <img src="<?php echo $this->template_images; ?>legend_league.png" alt="" className="img-fluid" width="90px" />
-                                        <h2>Legend</h2> */}
-
+                                  
                                 </div>
                             </div>
                         </div>
@@ -482,7 +460,7 @@ const {
                                     <div className="row">
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input type="text" readonly className={`form-control${usernameIdErr ? " showError" : ""}`} name="username" onChange={handleChange} value={state.username} placeholder="Enter User Name" />
+                                                <input type="text" readonly className={`form-control${usernameIdErr ? " showError" : ""}`} name="username" onChange={handleChange} value={state.username} placeholder="Enter User Name" readOnly />
                                                 <div>
                                                     {usernameIdErr && (
                                                         <div

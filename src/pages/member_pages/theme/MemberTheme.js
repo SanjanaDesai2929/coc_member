@@ -78,7 +78,7 @@ const MemberTheme = (props) => {
                                             <i class="fa-solid fa-table-list pe-2"></i>
                                             <span class="label">Incomes</span>
                                         </a>
-                                        <ul aria-labelledby="referral" class="dropdown-menu ">
+                                        <ul aria-labelledby="referral" class={`dropdown-menu ${window.location.pathname=="/account/roi_income" || window.location.pathname=="/account/team_revenue" || window.location.pathname=="/account/referral_revenue" || window.location.pathname=="/account/league_reward"||window.location.pathname=="/account/clan_league_rewards" ? "show":""}`}>
                                         <li class={`${window.location.pathname=="/account/roi_income" ? "active":""}`}>
                                                 <NavLink to="/account/roi_income" class="dropdown-item">
                                                     <span class="label">Daily Treasure</span>
