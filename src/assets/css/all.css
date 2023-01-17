@@ -7,13 +7,31 @@
 /* css chnaging */
 ::placeholder {
   font-family: 'clashregular' !important;
+  font-size: 16px;
+}
+select#country_name {
+  font-family: 'clashregular';
+}
+input#profilePic {
+  font-family: 'clashregular';
 }
 .install{
   font-family: 'clashregular';
   color: white;
   font-size: 16px;
 }
+input[type="file"]::file-selector-button {
+  /* border: 2px solid #b154f0; */
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #b154f0;
+  transition: 1s;
+}
 
+/* input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+} */
 /* folder css */
  .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");

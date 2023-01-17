@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "../theme/Breadcrumb";
 import MemberTheme from "../theme/MemberTheme";
 import Chat from "../../../assets/images/chart.png"
+import unranked from "../../../assets/images/unranked.png"
 
 const EditProfile = () => {
 
@@ -439,8 +440,8 @@ const {
                                     <img src="<?php echo $this->template_images; ?>phone_min.jpg" className="img-fluid rounded-circle" alt="" width="120px" height="120px" />
                                 </div>
                                 <div className="profile-info purple-budge-body pb-4 px-4 px-lg-5">
-                                    <h2></h2>
-                                    <h4 className="mb-4"><i></i></h4>
+                                    <h2>COC428789</h2>
+                                    <h4 className="mb-4" style={{fontFamily:'clashregular'}}><i>coc2ffdhjjerwfe</i></h4>
                                     <div className="member_info text-start text-lg-center text-xl-start" style={{ fontFamily: 'clashregular', color: "white" }}>
                                         <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>Phone:</strong></p>
                                         <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>Email:</strong> </p>
@@ -448,7 +449,40 @@ const {
                                         <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>League Reward:</strong></p>
                                     </div>
 
-                                  
+                                    <img src={unranked} alt="" class="img-fluid" width="90px"/>
+                                    <h2>Unranked</h2>
+                            
+                                        {/* <img src="<?php echo $this->template_images; ?>bronze_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Rank 1</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Rank 2</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Bronze</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Silver</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>gold_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Gold</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>crystal_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Crystal</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>master_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Master</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>champion_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Champion</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>titan_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Titan</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>legend_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Legend</h2>
+                            
+                                    */}
                                 </div>
                             </div>
                         </div>
@@ -479,8 +513,8 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input className="form-control" type="file" name="profilepicter" id="profilePic" aria-label="Profile Picture" />
-                                                <input name="old_profile_pic" type="hidden" onChange={handleChange1} classNameName={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
+                                                <input className="form-control"  style={{fontFamiy:'clashregular'}} type="file" name="profilepicter" id="profilePic" aria-label="Profile Picture" />
+                                                <input name="old_profile_pic"  type="hidden" onChange={handleChange1} classNameName={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
                                                 <div>
                                                     {profilepicterIdErr && (
                                                         <div
@@ -500,7 +534,7 @@ const {
                                         <div className="col-lg-6">
                                             <div className="form_input">
                                                 {/* <input type="text" id="full_name" className={`form-control ${fullnameIdErr ? " showError" : ""}`} name="full_name" onChange={handleChange} value={state.full_name} placeholder="Enter Full Name" /> */}
-                                                <input type="text" id="full_name" name="full_name" className={`form-control ${fullnameIdErr ? " showError" : ""}`} onChange={handleChange} value={state.full_name} placeholder="Enter Full Name" />
+                                                <input type="text" id="full_name" readonly name="full_name" className={`form-control ${fullnameIdErr ? " showError" : ""}`} onChange={handleChange} value={state.full_name} placeholder="Enter Full Name" />
 
                                                 <div>
                                                     {fullnameIdErr && (
@@ -539,7 +573,7 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input type="email" className={`form-control ${emailIdErr ? " showError" : ""}`} name="email" id="email" onChange={handleChange} value={state.email} placeholder="Enter Email" readonly />
+                                                <input type="email" readOnly className={`form-control ${emailIdErr ? " showError" : ""}`} name="email" id="email" onChange={handleChange} value={state.email} placeholder="Enter Email" />
                                                 <div>
                                                     {emailIdErr && (
                                                         <div
@@ -559,8 +593,8 @@ const {
 
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <select id="country_name" name="country_name" className={`form-control ${countrynameIdErr ? " showError" : ""}`} placeholder="Selecy Country Code" onChange={handleChange} value={state.country_name}>
-                                                    <option value={state.country_name} className="form-control">Selecy Country Code</option>
+                                                <select id="country_name" style={{fontFamiy:'clashregular'}} name="country_name" className={`form-control ${countrynameIdErr ? " showError" : ""}`} placeholder="Selecy Country Code" onChange={handleChange} value={state.country_name}>
+                                                    <option value={state.country_name} className="form-control" >Selecy Country Code</option>
                                                     <option></option>
                                                     <div>
                                                         {countrynameIdErr && (

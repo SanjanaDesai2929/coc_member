@@ -104,7 +104,7 @@ $(document).ready(function () {
                         <div class="purple-box table-box py-5 px-4 ">
                             <div class="row align-items-center">
                                 <div class="col-md-6 mb-3">
-                                    <h4 class="table-title">statement</h4>
+                                    <h4 class="table-title">Statement</h4>
                                 </div>
                             </div>
                             <div class="row">
