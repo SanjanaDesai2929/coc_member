@@ -25,9 +25,9 @@ const LinkPage = () => {
                             <div class="card purple-box">
                                 <div class="card-body">
                                      <div class="copy  w-100">
-                                        <input type="text" class="form-control" value="https://developerinfotech.com/demo/rtvk/ci_admin_api/register/ref/COC428789" id="reflink" style={{fontFamily:"clashregular",padding:"0 25px",height:"62px",fontSize:"1.001rem"}}/>
+                                        <input type="text" class="form-control" value={`https://developerinfotech.com/demo/rtvk/ci_admin_api/register/ref/COC428789`} id="reflink" style={{fontFamily:"clashregular",padding:"0 25px",height:"62px",fontSize:"1.001rem"}}/>
                                         <div class="d-flex justify-content-center mt-4">
-                                            <button onClick={(value)=>copyRefLink('reflink','https://developerinfotech.com/demo/rtvk/ci_admin_api/register/ref/COC428789')} class="theme-btn text-white me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">
+                                            <button onClick={(value)=>copyRefLink('reflink',`https://developerinfotech.com/demo/rtvk/ci_admin_api/register/ref/COC428789`)} class="theme-btn text-white me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">
                                                 Copy
                                             </button>
                                             <a href={`${window.location.origin}/demo/rtvk/ci_admin_api/register/ref/COC428789`} target="_blank" class="theme-btn text-white " data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">

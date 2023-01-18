@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MemberTheme from './theme/MemberTheme'
 import queen from "../../assets/images/queen.png"
 import coin from "../../assets/images/coin.png"
@@ -12,134 +12,158 @@ import dragon_min from "../../assets/images/dragon_min.png"
 import goblin_min from "../../assets/images/goblin_min.png"
 import barbarian_min from "../../assets/images/barbarian_min.png"
 import unranked_1 from "../../assets/images/unranked_1.png"
+import { NavLink } from 'react-router-dom'
 
 
 
 const Home = () => {
+  const [state, setState] = useState({})
+  // const data = sessionStorage.getItem("admin")
+  // const admin_data = JSON.parse(data)
+  const homeData = async () => {
+    const fromdata=new FormData()
+    fromdata.append("member_id",3)
+    var response = await fetch(`/demo/rtvk/ci_admin_api/coc22game/api/Commondata`, {
+      method: "POST",
+      headers: {
+        // "Content-type": "application/json",
+        Authorization: "d200d1f41c0f1b45087d6e8a2158c382bce469daf7dc51dc28237a0822a08d86b7df15b7272aeee7a09191e0511ca96f8cdabb11b1bbae92ed0df86ef18d554altcbvyVgoGH+89DP5k7os7Q2VCfHDSCUl4gaAWeQzWM="
+
+        // Authorization: admin_data.reset_api
+      },
+      body: fromdata
+    })
+    var res_data = await response.json();
+    setState(res_data.message[0])
+
+  }
+  useEffect(() => {
+    homeData()
+  }, [])
   return (
     <>
       <MemberTheme>
-        <div class="content-wrap">
+        <div className="content-wrap">
           {/* <!-- card --> */}
-          <div class="row box-row">
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={queen} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Main Wallet</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/account_history" role="button">History</a>
+          <div className="row box-row">
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={queen} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Main Wallet</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" />{state.wallet_balance}</h2>
+                  <NavLink className="btn btn-primary theme-btn" to="/account/account_history" role="button">History</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={warden_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Active Package</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/subscriber/add_balance" role="button">Upgrade</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={warden_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Active Package</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" /> {state.total_upgraded_amount}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/add_balance" role="button">Upgrade</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={flying_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Pending  Withdraw</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary  theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/withdrawal" role="button">Update</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={flying_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Pending  Withdraw</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" /> {state.total_pending_withdrawl}</h2>
+                  <NavLink className="btn btn-primary  theme-btn" href="/withdrawal" role="button">Update</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={roayl_champ_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Paid  Withdraw</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/withdrawal" role="button">Update</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={roayl_champ_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Paid  Withdraw</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" /> {state.total_paid_withdrawl}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/withdrawal" role="button">Update</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={queen_2_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Daily Treasure</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/roi_income" role="button">Check</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={queen_2_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Daily Treasure</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" />{state.total_daily_treasure}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/account/roi_income" role="button">Check</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={warden_2_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Super Resources</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/team_revenue" role="button">Check</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={warden_2_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Super Resources</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" />{state.total_super_resources}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/account/team_revenue" role="button">Check</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={ballon_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Referral Revenue</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/referral_revenue" role="button">Check</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={ballon_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Referral Revenue</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" />{state.total_referral_revenue}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/account/referral_revenue" role="button">Check</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={dragon_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">League Reward</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/league_reward" role="button">Check</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={dragon_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">League Reward</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" />{state.total_league_reward}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/account/league_reward" role="button">Check</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={goblin_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Clan League Reward</h3>
-                  <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/clan_league_rewards" role="button">Check</a>
+            <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={goblin_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Clan League Reward</h3>
+                  <h2 className="coin-balance mt-2"><img src={coin} alt="$" className="img-fluid pe-2" /> {state.total_clan_league_reward}</h2>
+                  <NavLink className="btn btn-primary theme-btn" href="/account/clan_league_rewards" role="button">Check</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-12">
-              <div class="col-inner balance-card text-end">
-                <div class="card-header">
-                  <img src={barbarian_min} alt="logo" class="img-fluid queen" />
-                  <h3 class="card-title">Clan League Reward Level</h3>
-                  <h2 class="coin-balance">Level: 0 </h2>
-                  <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/clan_league_rewards" role="button">Check</a>
+            <div className="col-md-6 col-12">
+              <div className="col-inner balance-card text-end">
+                <div className="card-header">
+                  <img src={barbarian_min} alt="logo" className="img-fluid queen" />
+                  <h3 className="card-title">Clan League Reward Level</h3>
+                  <h2 className="coin-balance mt-2">Level: 0 </h2>
+                  <NavLink className="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/clan_league_rewards" role="button">Check</NavLink>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-12">
-              <div class="col-inner balance-card text-start p-3">
-                <div class="card-header">
-                  <h2 class="coin-balance text-start mb-3">Iphone Reward</h2>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h3 class="card-title ">Strong Side:</h3>
-                      <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "0%" }} aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+            <div className="col-md-6 col-12">
+              <div className="col-inner balance-card text-start p-3">
+                <div className="card-header">
+                  <h2 className="coin-balance text-start mb-3">Iphone Reward</h2>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <h3 className="card-title ">Strong Side:</h3>
+                      <div className="progress">
+                        <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "0%" }} aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                       </div>
-                      <p class="text-end text-light"><img src={coin} alt="$" class="img-fluid pe-2" style={{ height: "20px" }} />6000</p>
+                      <p className="text-end text-light"><img src={coin} alt="$" className="img-fluid pe-2" style={{ height: "20px" }} />6000</p>
                     </div>
-                    <div class="col-md-6">
-                      <h3 class="card-title ">Other Side:</h3>
-                      <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "0%" }} aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    <div className="col-md-6">
+                      <h3 className="card-title ">Other Side:</h3>
+                      <div className="progress">
+                        <div className="progress-bar" role="progressbar" aria-label="Basic example" style={{ width: "0%" }} aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                       </div>
-                      <p class="text-end text-light"><img src={coin} alt="$" class="img-fluid pe-2" style={{ height: "20px" }} />6000</p>
+                      <p className="text-end text-light"><img src={coin} alt="$" className="img-fluid pe-2" style={{ height: "20px" }} />6000</p>
                     </div>
                   </div>
 
@@ -150,50 +174,50 @@ const Home = () => {
 
 
           {/* <!-- End of Card --> */}
-          <div class="row mt-5 justify-content-center income-row">
-            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 mb-4">
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="level-info purple-box h-100">
-                    <div class="purple-budge-title text-center">
+          <div className="row mt-5 justify-content-center income-row">
+            <div className="col-xl-8 col-lg-12 col-md-12 col-sm-12 mb-4">
+              <div className="row">
+                <div className="col-md-8">
+                  <div className="level-info purple-box h-100">
+                    <div className="purple-budge-title text-center">
                       <h3>League Rewards</h3>
                     </div>
-                    <div class="purple-budge-body p-4 text-center">
-                      <div class="row align-items-center">
-                        <div class="col-lg-6 col-12 border-end pb-lg-0 pb-4 mb-lg-0 mb-4 border-light">
-                          <p class="card-title text-center mb-3">Current Month</p>
-                          <img src={unranked_1} alt="" class="img-fluid" width="90px" />
+                    <div className="purple-budge-body p-4 text-center">
+                      <div className="row align-items-center">
+                        <div className="col-lg-6 col-12 border-end pb-lg-0 pb-4 mb-lg-0 mb-4 border-light">
+                          <p className="card-title text-center mb-3">Current Month</p>
+                          <img src={unranked_1} alt="" className="img-fluid" width="90px" />
                           <h2>Unranked</h2>
-                          <div class="counterup_inner d-flex justify-content-center">
-                            <div class="single_counterup one">
-                              <div class="counterup_text">
-                                <h2 class="counterup color1">0</h2>
+                          <div className="counterup_inner d-flex justify-content-center">
+                            <div className="single_counterup one">
+                              <div className="counterup_text">
+                                <h2 className="counterup color1">0</h2>
                                 <span>Strong Side</span>
                               </div>
                             </div>
-                            <div class="single_counterup two">
-                              <div class="counterup_text">
-                                <h2 class="counterup color2">0</h2>
+                            <div className="single_counterup two">
+                              <div className="counterup_text">
+                                <h2 className="counterup color2">0</h2>
                                 <span>Other Side</span>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-6 col-12">
-                          <p class="card-title text-center mb-3">Last Month</p>
-                          <img src={unranked_1} alt="" class="img-fluid" width="90px" />
+                        <div className="col-lg-6 col-12">
+                          <p className="card-title text-center mb-3">Last Month</p>
+                          <img src={unranked_1} alt="" className="img-fluid" width="90px" />
                           <h2>Unranked</h2>
 
-                          <div class="counterup_inner d-flex justify-content-center">
-                            <div class="single_counterup one">
-                              <div class="counterup_text">
-                                <h2 class="counterup color1">0</h2>
+                          <div className="counterup_inner d-flex justify-content-center">
+                            <div className="single_counterup one">
+                              <div className="counterup_text">
+                                <h2 className="counterup color1">0</h2>
                                 <span>Strong Side</span>
                               </div>
                             </div>
-                            <div class="single_counterup two">
-                              <div class="counterup_text">
-                                <h2 class="counterup color2">0</h2>
+                            <div className="single_counterup two">
+                              <div className="counterup_text">
+                                <h2 className="counterup color2">0</h2>
                                 <span>Other Side</span>
                               </div>
                             </div>
@@ -204,20 +228,20 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="level-info purple-box h-100">
-                    <div class="purple-budge-title-2 text-center">
+                <div className="col-md-4">
+                  <div className="level-info purple-box h-100">
+                    <div className="purple-budge-title-2 text-center">
                       <h3>Level</h3>
                     </div>
-                    <div class="purple-budge-body level-wrap p-4 text-center">
-                      <h2 class="level-txt">0</h2>
+                    <div className="purple-budge-body level-wrap p-4 text-center">
+                      <h2 className="level-txt">0</h2>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-8 col-md-6 col-sm-12 mb-4">
-              <div class="purple-box h-100">
+            <div className="col-xl-4 col-lg-8 col-md-6 col-sm-12 mb-4">
+              <div className="purple-box h-100">
                 <canvas id="incomeChart" width="709" height="708" style={{ display: "block", boxSizing: " border-box", height: "354px", width: "354.5px" }}></canvas>
               </div>
             </div>

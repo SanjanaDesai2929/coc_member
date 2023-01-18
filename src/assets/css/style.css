@@ -19,11 +19,13 @@
         background-size: cover;
         /*background-image:url(../images/admin_bg.jpg);*/
         /*background-color: #140e38; */
-        background-color: #000000;
+        background-color: #000000 !important;
         background-repeat: no-repeat;  
         font-family: 'clashregular';
     } 
- 
+ a{
+  text-decoration: none !important;
+ }
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
       font-family: 'clashregular';
     }
@@ -51,7 +53,7 @@
     }   
     .purple-box{
       position: relative;
-      background: #09002a4f;
+      background: #09002a4f !important;
       border-radius: 20px !important;
       border: 4px solid #2e2920 !important;
       /*border: 4px solid #281e4d;*/
@@ -167,7 +169,9 @@
       top: 0;
       right: 0;    
     }
-    
+    .dropdown-toggle::after{
+      color: white !important;
+    }
     .member-name{
       font-size: 30px;
       color: #ffffff;
@@ -301,12 +305,12 @@
       background-position: center;
     }
     .theme-btn:hover{
-      color: var(--white-color);
-      background-color: transparent;
+      color: var(--white-color) !important;
+      background-color: transparent !important;
     }
     .card-header img.queen{
       left: -50px;
-      top:-65px;
+     
       position: absolute;
       bottom: -35px;
     }
@@ -672,13 +676,15 @@
   .form_input input {
     width: 100%;
     height: 50px ;
-    padding: 0 25px;
+    padding: 0 25px !important;
     line-height: 17px;
-    color: #ffffff;
+    color: #ffffff !important;
     background: inherit;
     border: 2px solid #b154f040 !important;
     border-radius: 10px !important;
+    background-color: transparent !important;
   }
+
   .form-control[type="file"]{
     padding: 0;
   }
