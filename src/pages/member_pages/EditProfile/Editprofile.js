@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "../theme/Breadcrumb";
 import MemberTheme from "../theme/MemberTheme";
 import Chat from "../../../assets/images/chart.png"
+import unranked from "../../../assets/images/unranked.png"
 
 const EditProfile = () => {
 
@@ -350,8 +351,8 @@ const [wallet1,setwallet1] = useState({
 const handleChange6 =(e) =>{
     const {name} = e.target
     const {value} = e.target
-    setwallet({
-        ...wallet,
+    setwallet1({
+        ...wallet1,
         [name]:value
     })
 }
@@ -430,8 +431,8 @@ const {
         <MemberTheme>
             <div className="content-wrap">
                 <Breadcrumb value="Profile Setting" />
-                <div className="row datatable-row">
-                    <div className="row text-center d-flex profile-row">
+                {/* <div className="row secyriy"> */}
+                    <div className="row text-center d-flex profile-row secyriy">
                         <div className="col-xl-4 col-lg-12 rounded col shadow-lg form-column mb-4">
                             <div className="purple-box text-center text-white h-100">
                                 <div className="profile-img">
@@ -439,16 +440,49 @@ const {
                                     <img src="<?php echo $this->template_images; ?>phone_min.jpg" className="img-fluid rounded-circle" alt="" width="120px" height="120px" />
                                 </div>
                                 <div className="profile-info purple-budge-body pb-4 px-4 px-lg-5">
-                                    <h2></h2>
-                                    <h4 className="mb-4"><i></i></h4>
+                                    <h2>COC428789</h2>
+                                    <h4 className="mb-4" style={{fontFamily:'clashregular',color:"white"}}><i>coc2ffdhjjerwfe</i></h4>
                                     <div className="member_info text-start text-lg-center text-xl-start" style={{ fontFamily: 'clashregular', color: "white" }}>
-                                        <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>Phone:</strong></p>
-                                        <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>Email:</strong> </p>
-                                        <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>Clan League Reward:</strong> </p>
-                                        <p style={{ fontFamily: 'clashregular', color: "white" }}><strong>League Reward:</strong></p>
+                                        <p className="information"><strong className="abc">Phone:</strong>87878787878</p>
+                                        <p className="information"><strong className="abc">Email:</strong>coc1@gmail.com </p>
+                                        <p className="information"><strong className="abc">Clan League Reward:</strong> No Reward </p>
+                                        <p className="information"><strong className="abc">League Reward:</strong>Unranked</p>
                                     </div>
 
-                                  
+                                    <img src={unranked} alt="" class="img-fluid" width="90px"/>
+                                    <h2>Unranked</h2>
+                            
+                                        {/* <img src="<?php echo $this->template_images; ?>bronze_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Rank 1</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Rank 2</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Bronze</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>silver_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Silver</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>gold_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Gold</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>crystal_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Crystal</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>master_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Master</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>champion_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Champion</h2>
+                                    
+                                        <img src="<?php echo $this->template_images; ?>titan_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Titan</h2>
+                                
+                                        <img src="<?php echo $this->template_images; ?>legend_league.png" alt="" class="img-fluid" width="90px"/>
+                                        <h2>Legend</h2>
+                            
+                                    */}
                                 </div>
                             </div>
                         </div>
@@ -479,8 +513,8 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input className="form-control" type="file" name="profilepicter" id="profilePic" aria-label="Profile Picture" />
-                                                <input name="old_profile_pic" type="hidden" onChange={handleChange1} classNameName={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
+                                                <input className="form-control"  style={{fontFamiy:'clashregular'}} type="file" name="profilepicter" id="profilePic" aria-label="Profile Picture" />
+                                                <input name="old_profile_pic"  type="hidden" onChange={handleChange1} classNameName={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
                                                 <div>
                                                     {profilepicterIdErr && (
                                                         <div
@@ -500,7 +534,7 @@ const {
                                         <div className="col-lg-6">
                                             <div className="form_input">
                                                 {/* <input type="text" id="full_name" className={`form-control ${fullnameIdErr ? " showError" : ""}`} name="full_name" onChange={handleChange} value={state.full_name} placeholder="Enter Full Name" /> */}
-                                                <input type="text" id="full_name" name="full_name" className={`form-control ${fullnameIdErr ? " showError" : ""}`} onChange={handleChange} value={state.full_name} placeholder="Enter Full Name" />
+                                                <input type="text" id="full_name" readonly name="full_name" className={`form-control ${fullnameIdErr ? " showError" : ""}`} onChange={handleChange} value={state.full_name} placeholder="Enter Full Name" />
 
                                                 <div>
                                                     {fullnameIdErr && (
@@ -520,7 +554,7 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input type="text" id="phone_no" className={`form-control${ponenumberIdErr ? " showError" : ""}`} name="phone_no" onChange={handleChange} value={state.pone_no} placeholder="Enter Phone No" />
+                                                <input type="tel" id="phone" className={`form-control${ponenumberIdErr ? " showError" : ""}`} name="pone_no" onChange={handleChange} value={state.pone_no} placeholder="Enter Phone No" />
                                                 <div>
                                                     {ponenumberIdErr && (
                                                         <div
@@ -539,7 +573,7 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input type="email" className={`form-control ${emailIdErr ? " showError" : ""}`} name="email" id="email" onChange={handleChange} value={state.email} placeholder="Enter Email" readonly />
+                                                <input type="email" className={`form-control ${emailIdErr ? " showError" : ""}`} name="email" id="email" onChange={handleChange} value={state.email} placeholder="Enter Email" readOnly/>
                                                 <div>
                                                     {emailIdErr && (
                                                         <div
@@ -559,9 +593,12 @@ const {
 
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <select id="country_name" name="country_name" className={`form-control ${countrynameIdErr ? " showError" : ""}`} placeholder="Selecy Country Code" onChange={handleChange} value={state.country_name}>
-                                                    <option value={state.country_name} className="form-control">Selecy Country Code</option>
-                                                    <option></option>
+                                                <select id="country_name" style={{fontFamiy:'clashregular'}} name="country_name" className={`form-control ${countrynameIdErr ? " showError" : ""}`} placeholder="Selecy Country Code" onChange={handleChange} value={state.country_name}>
+                                                    <option value="" className="form-control" >Selecy Country Code</option>
+                                                    <option value="surat">surat</option>
+                                                    <option value="rajkot">rajkot</option>
+                                                    <option value="surat">surat</option>
+
                                                     <div>
                                                         {countrynameIdErr && (
                                                             <div
@@ -608,15 +645,15 @@ const {
                                 </form>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-md-6  rounded col shadow-lg form-column mb-4">
+                        <div className="row security">
+                            <div className="col-xl-6 col-md-6  rounded col shadow-lg form-column mb-4">
                                 <div className="purple-box  h-100 text-white text-start purple-budge-body p-5 form-box">
                                     <h2 className="mb-4">Change Password</h2>
                                     <form className="form-valide-with-icon" method="post" name="form_password" id="form_password" action="<?php echo base_url(); ?>profile">
                                         <div className="row g-3">
                                             <div className="col-12">
                                                 <div className="form_input">
-                                                    <input type="password" name="old_password" className={`form-control${oldpasswordIdErr ? "showError" : ""}`} onChange={handleChange2} id="password" placeholder="Enter Old Password" value={state2.newpassword} />
+                                                    <input type="password" name="oldpassword" className={`form-control${oldpasswordIdErr ? "showError" : ""}`} onChange={handleChange2} id="password" placeholder="Enter Old Password" value={state2.oldpassword} />
                                                     <div>
                                                         {oldpasswordIdErr && (
                                                             <div
@@ -635,7 +672,7 @@ const {
                                             </div>
                                             <div className="col-12">
                                                 <div className="form_input">
-                                                    <input type="password" name="new_password" className={`form-control ${newpasswordIdErr ? "showError" : ""}`} onChange={handleChange2} id="new_password" placeholder="Enter New Password" value={state2.newpassword} />
+                                                    <input type="password" name="newpassword" className={`form-control ${newpasswordIdErr ? "showError" : ""}`} onChange={handleChange2} id="password" placeholder="Enter New Password" value={state2.newpassword} />
                                                     <div>
                                                         {newpasswordIdErr && (
                                                             <div
@@ -654,7 +691,7 @@ const {
                                             </div>
                                             <div className="col-12">
                                                 <div className="form_input">
-                                                    <input type="password" id="c_password" className={`form-control ${confirmpasswordIdErr ? "showError" : ""}`} onChange={handleChange2} name="c_password" placeholder="Enter Confirm Password" value={state2.confirmpassword} />
+                                                    <input type="password" id="password" className={`form-control ${confirmpasswordIdErr ? "showError" : ""}`} onChange={handleChange2} name="confirmpassword" placeholder="Enter Confirm Password" value={state2.confirmpassword} />
                                                     <div>
                                                         {confirmpasswordIdErr && (
                                                             <div
@@ -680,14 +717,14 @@ const {
                                     </form>
                                 </div>
                             </div>
-                            <div className="col-md-6 rounded col shadow-lg form-column mb-4">
-                                <div className="purple-box h-100 text-white text-start purple-budge-body p-5 form-box">
+                            <div className="col-xl-6  col-md-6 rounded col shadow-lg form-column form-padding mb-4 ">
+                                <div className="purple-box h-100 text-white text-start purple-budge-body p-5 form-box ">
                                     <h2 className="mb-4">Security Password</h2>
                                     <form className="form-valide-with-icon" method="post" name="form_security" id="form_security" action="<?php echo base_url(); ?>security">
                                         <div className="row g-3">
                                             <div className="col-lg-12">
                                                 <div className="form_input">
-                                                    <input type="password" className={`form-control ${oldsecurityIdError ? "showError" : ""}`} name="old_security" onChange={handleChange3} id="old_security" placeholder="Enter Old Security Code" value={state3.oldsecuritycode} />
+                                                    <input type="password" className={`form-control ${oldsecurityIdError ? "showError" : ""}`} name="oldsecuritycode" onChange={handleChange3} id="security" placeholder="Enter Old Security Code" value={state3.oldsecuritycode} />
                                                     <div>
                                                         {oldsecurityIdError && (
                                                             <div
@@ -706,7 +743,7 @@ const {
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="form_input">
-                                                    <input type="password" className={`form-control ${newsecurityIdError ? "showError" : ""}`} name="new_security" onChange={handleChange3} id="new_security" placeholder="Enter New Security Code" value={state3.newsecuritycode} />
+                                                    <input type="password" className={`form-control ${newsecurityIdError ? "showError" : ""}`} name="newsecuritycode" onChange={handleChange3} id="security" placeholder="Enter New Security Code" value={state3.newsecuritycode} />
                                                     <div>
                                                         {newsecurityIdError && (
                                                             <div
@@ -725,7 +762,7 @@ const {
                                             </div>
                                             <div className="col-lg-12">
                                                 <div className="form_input">
-                                                    <input type="password" className={`form-control ${confirmsecurityIdError ? "showError" : ""}`} id="c_security" onChange={handleChange3} name="c_security" placeholder="Enter Confirm Security Code" value={state3.confirmsecuritycode} />
+                                                    <input type="password" className={`form-control ${confirmsecurityIdError ? "showError" : ""}`} id="security" onChange={handleChange3} name="confirmsecuritycode" placeholder="Enter Confirm Security Code" value={state3.confirmsecuritycode} />
                                                     <div>
                                                         {confirmsecurityIdError && (
                                                             <div
@@ -754,24 +791,24 @@ const {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-md-6 rounded col shadow-lg form-column mb-4">
+                        <div className="row  security1">
+                            <div className="col-md-6 rounded col shadow-lg form-column  mb-4">
                                 <div className="purple-box h-100 text-white text-start purple-budge-body p-5 form-box">
                                     <h2 className="mb-4">Two Factor Authentication</h2>
                                     <div className="row mb-3">
                                         <div className="col-xl-3">
-                                            <img src={Chat} alt="" className="img-fluid" />
+                                            <img src={Chat} alt="" className="img-fluid orcode" />
                                         </div>
                                         <div className="col-xl-9 text-white" style={{ fontFamily: "'clashregular'" }}>
-                                            <h6 className="my-2 factor install">1. Install <a href="http://m.google.com/authenticator" target="_blank">Google Authenticator</a> on your mobile device.</h6>
-                                            <h6 className="my-2 factor install">2. Your Secret Code is: <b><span style={{color:"#0d6efd"}}>KY7TOZKHLZA6G5VM</span></b></h6>
-                                            <h6 className="my-2 factor install">3. Please enter two factor token from Google Authenticator to verify correct setup:</h6>
+                                            <h6 className="my-2 mb-0 factor install">1. Install <a href="http://m.google.com/authenticator" target="_blank">Google Authenticator</a> on your mobile device.</h6>
+                                            <h6 className="my-2 mb-0 factor install">2. Your Secret Code is: <b><span style={{color:"#0d6efd"}}>KY7TOZKHLZA6G5VM</span></b></h6>
+                                            <h6 className="my-2 mb-0 factor install">3. Please enter two factor token from Google Authenticator to verify correct setup:</h6>
                                         </div>
                                     </div>
-                                    <form className="form-valide-with-icon" name="google-auth-form" id="google-auth-form" method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>profile">
+                                    <form className="form-valide-with-icon " name="google-auth-form" id="google-auth-form" method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>profile">
                                         <div className="form-group">
                                             <div className="form_input">
-                                                <input type="text" className={`form-control person-password ${memberauthcodeIdErr ? "showError" :""}`} id="member_auth_code" name="member_auth_code" value={wallet1.member_auth_code} placeholder="Enter two factor token" />
+                                                <input type="text" className={`form-control person-password ${memberauthcodeIdErr ? "showError" :""}`} id="member_auth_code" onChange={handleChange6} name="member_auth_code" value={wallet1.member_auth_code} placeholder="Enter two factor token" />
                                                 <div>
                                                         {memberauthcodeIdErr && (
                                                             <div
@@ -827,9 +864,9 @@ const {
 
                                 </div>
                             </div>
-                            <div className="col-md-6 rounded col shadow-lg form-column mb-4">
+                            <div className="col-md-6 rounded col shadow-lg form-column form-padding mb-4 ">
                                 <div className="purple-box  h-100 text-white text-start purple-budge-body p-5 form-box">
-                                    <h2 className="mb-4">Withdraw Wallet Address</h2>
+                                    <h2 className="mb-4 ml-3">Withdraw Wallet Address</h2>
                                     <form className="" method="post" name="form_wallet" id="form_wallet" action="<?php echo base_url(); ?>profile">
                                         <div className="row g-3">
                                             <div className="col-lg-12">
@@ -861,7 +898,7 @@ const {
                             </div>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </MemberTheme >
 

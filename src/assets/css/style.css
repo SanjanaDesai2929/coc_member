@@ -310,7 +310,15 @@
     }
     .card-header img.queen{
       left: -50px;
-     
+      /* top:-65px; */
+      /* top: -18px; */
+      position: absolute;
+      bottom: -35px;
+    }
+    .card-header img.queen1{
+      left: -50px;
+      /* top:-65px; */
+      top: -18px;
       position: absolute;
       bottom: -35px;
     }
@@ -598,7 +606,7 @@
     z-index: 1;
   }
   .breadcrumb-row{
-    /* margin-bottom: 45px; */
+    margin-bottom: 45px;
   }
   .breadcrumb-title{
     line-height: 38px;
@@ -637,8 +645,13 @@
     color: #fff !important;
   } 
   /* profile page */
+.orcode{
+  max-width: 138px;
+}
+
   .profile-row{
     margin-top: 150px;
+    /* margin-top: 105px; */
   }
   .profile-img{
     padding: 20px;
@@ -680,6 +693,7 @@
     line-height: 17px;
     color: #ffffff !important;
     background: inherit;
+    font-family: 'clashregular';
     border: 2px solid #b154f040 !important;
     border-radius: 10px !important;
     background-color: transparent !important;

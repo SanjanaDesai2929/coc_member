@@ -1,9 +1,9 @@
 import React from 'react'
 import Breadcrumb from '../theme/Breadcrumb'
 import MemberTheme from '../theme/MemberTheme'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import $ from "jquery"
 const AddNew = () => {
 

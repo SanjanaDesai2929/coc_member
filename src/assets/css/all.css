@@ -7,13 +7,94 @@
 /* css chnaging */
 ::placeholder {
   font-family: 'clashregular' !important;
+  font-size: 16px;
+}
+select#country_name {
+  font-family: 'clashregular';
+}
+input#profilePic {
+  font-family: 'clashregular';
 }
 .install{
   font-family: 'clashregular';
   color: white;
   font-size: 16px;
 }
+input[value=""]
+{
+  font-family: 'clashregular';
+}
 
+select#country_name:focus {
+  /* font-family: 'clashregular'; */
+  border: 2px solid #86b7fe !important;
+
+}
+
+.secyriy{
+  /* margin-right: calc(-1.5 * var(--bs-gutter-x)) !important; */
+  padding-right: calc(var(--bs-gutter-x) * -0.5) !important;
+
+}
+
+.row.text-center.d-flex.profile-row {
+  padding-right: calc(var(--bs-gutter-x) * -0.5) ;
+   
+ 
+  /* margin-right: calc(var(--bs-gutter-x) * -.5); */
+}
+
+.security{
+  padding-right: calc(var(--bs-gutter-x) * -0.5) !important;
+  /* margin-right: calc(-1.5 * var(--bs-gutter-x)) !important; */
+
+}
+.security1{
+  padding-right: calc(var(--bs-gutter-x) * -0.5) !important;
+}
+
+input[type=text]:focus {
+  border: 2px solid #86b7fe !important;
+}
+input[type=password]:focus {
+  border: 2px solid #86b7fe !important;
+}
+.abc{
+font-size: 16px;
+margin-right: 5px;
+}
+.form-padding{
+  padding-right: 0px;
+}
+.information{
+font-family: 'clashregular';
+font-size: 16px;
+color: white;
+}
+/* .from_input input:focus{  
+  border: 1px solid #86b7fe !important;
+} */
+/* .form-control, #manage_tbl_wrapper select, .form_input select, #manage_tbl_wrapper input, .form_input input:focus{
+  border: 2px solid #86b7fe !important;
+
+} */
+
+input[type="file"]:focus{
+  /* border: 1px solid #3ebdfb !important; */
+}
+
+input[type="file"]::file-selector-button {
+  /* border: 2px solid #b154f0; */
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #b154f0;
+  transition: 1s;
+}
+
+/* input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+} */
 /* folder css */
  .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
