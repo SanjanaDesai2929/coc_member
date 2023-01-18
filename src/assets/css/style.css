@@ -704,7 +704,7 @@
   }
 
   .form-control[type="file"]{
-    padding: 0 !important;
+    padding: 4px !important;
   }
   .form-control::file-selector-button{
     background-color: #b154f0;
