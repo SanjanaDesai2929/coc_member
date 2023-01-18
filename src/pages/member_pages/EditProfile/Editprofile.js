@@ -514,7 +514,7 @@ const {
                                         <div className="col-lg-6">
                                             <div className="form_input">
                                                 <input  style={{fontFamiy:'clashregular'}} type="file" name="profilepicter"  className="form-control" id="profilePic" aria-label="Profile Picture" />
-                                                <input name="old_profile_pic"  type="hidden" onChange={handleChange1} classNameName={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
+                                                <input name="old_profile_pic"  type="hidden" onChange={handleChange1} className={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
                                                 <div>
                                                     {profilepicterIdErr && (
                                                         <div
