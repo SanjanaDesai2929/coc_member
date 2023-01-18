@@ -13,6 +13,8 @@ import ClansLeagueRewards from '../pages/member_pages/Income/ClansLeagueRewards'
 import ReferralRevenue from '../pages/member_pages/Income/ReferralRevenue';
 import Statement from '../pages/member_pages/Statement/Statement'
 import Withdraw from '../pages/member_pages/Withdraw/Withdraw'
+import Promotion from "../pages/member_pages/Promotion/promotion"
+import Register from '../pages/member_pages/Register/register';
 
 const MainRoute = () => {
 
@@ -33,8 +35,9 @@ const MainRoute = () => {
 
     { path: "/profile" , element: <EditProfile />},
     { path: "/account/statement" , element: <Statement />},
-    { path:"/withdrawal",element:<Withdraw /> }
-    
+    { path:"/withdrawal",element:<Withdraw /> },
+    { path:"/promotion", element:<Promotion/>},
+    { path:"/register/ref",element: <Register />}
   ])
   return routes
 }
