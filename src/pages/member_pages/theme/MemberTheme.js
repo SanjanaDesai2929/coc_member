@@ -190,7 +190,7 @@ const MemberTheme = (props) => {
                                                                         <img src={unranked_1} alt="logo" class="img-fluid " width="54" height="82" />
                                                                     </div>
                                                                     <div>
-                                                                        <span class="admin-name">COC428789</span>
+                                                                        <span class="admin-name" style={{marginRight:"3px"}}>COC428789</span>
                                                                     </div>
                                                                 </button>
                                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">

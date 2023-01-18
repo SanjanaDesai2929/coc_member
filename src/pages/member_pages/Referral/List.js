@@ -101,7 +101,7 @@ const List = () => {
                     <div class="col-md-6 offset-md-3">
                         <div class="mb-5">
                             <h2 class="small-title" style={{ fontFamily: "clashregular", marginBottom: "13px" }}>Search Level</h2>
-                            <div class="card purple-box">
+                            <div class="card purple-box" style={{backgroundColor:"transparent"}}>
                                 <div class="card-body">
                                     <form class="form-valide-with-icon" name="check_user" id="check_user" method="post" action="https://developerinfotech.com/demo/rtvk/ci_admin_api/">
                                         <div class="mb-3 w-100">

@@ -30,7 +30,7 @@ const Promotion = () => {
                                             <div class="content">
                                                 <p class="installfont">Join Clash of Clans Special Offer to get Referral Revenue, Daily Treasure, League Reward, Clan League Reward, etc...</p>
                                                 <p class="install">Click on the below button to get started.</p>
-                                                <NavLink className="btn mt-3 install now register" target="_blank" to="/register/ref" >Register Now</NavLink>
+                                                <NavLink className="btn mt-3 install now register" target="_blank" to="/register" >Register Now</NavLink>
                                                 <div class="footer_widget_list">
                                                     <div class="footer_social">
                                                         <ul class="d-flex flex-wrap flex-md-nowrap justify-content-center mt-5">

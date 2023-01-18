@@ -18,27 +18,27 @@ const Withdraw = () => {
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col">
                             <div class="col-inner balance-card text-end">
                                 <div class="card-header">
-                                    <img src={queen} alt="logo" class="img-fluid queen "/>
+                                    <img src={queen} alt="logo" class="img-fluid queen " style={{top:"-65px"}}/>
                                         <h3 class="card-title">Main Wallet</h3>
-                                        <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2"/> 0.00000000</h2>
+                                        <h2 class="coin-balance pt-2"><img src={coin} alt="$" class="img-fluid pe-2 " /> 0.00000000</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col">
                             <div class="col-inner balance-card text-end">
                                 <div class="card-header">
-                                    <img src={warden_min} alt="logo" class="img-fluid queen"/>
+                                    <img src={warden_min} alt="logo" class="img-fluid queen" style={{top:"-65px"}} />
                                         <h3 class="card-title">Pending Withdraw</h3>
-                                        <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2"/> 0.00000000</h2>
+                                        <h2 class="coin-balance pt-2"><img src={coin} alt="$" class="img-fluid pe-2 "/> 0.00000000</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col">
                             <div class="col-inner balance-card text-end">
                                 <div class="card-header">
-                                    <img src={flying_min} alt="logo" class="img-fluid queen"/>
-                                        <h3 class="card-title">Paid Withdraw</h3>
-                                        <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2"/> 0.00000000</h2>
+                                    <img src={flying_min} alt="logo" class="img-fluid queen" style={{top:"-65px"}}/>
+                                        <h3 class="card-title pt-2">Paid Withdraw</h3>
+                                        <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2 "/> 0.00000000</h2>
                                 </div>
                             </div>
                         </div>

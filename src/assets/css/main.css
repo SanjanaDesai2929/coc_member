@@ -87,6 +87,8 @@ select.form-control{
     appearance: auto;
     -moz-appearance: auto;
     -webkit-appearance: auto;
+    background-color: transparent !important;
+    color: white !important;
 }
 .cr-pointer{
     cursor: pointer !important;

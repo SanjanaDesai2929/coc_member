@@ -18,7 +18,7 @@ const SuperResourcesTable = () => {
                     },
 
                     'search': '' /*Empty to remove the label*/,
-                    'searchPlaceholder': "Type Something.."
+                    'searchPlaceholder': "Type something.."
 
                 },
                 ajax: {

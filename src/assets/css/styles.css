@@ -7460,7 +7460,7 @@ button {
 .dropdown-menu a:hover {
     text-decoration: unset;
     color:#ffc107 !important;
-    background-color: white!important;
+    /* background-color: white!important; */
 }
 
 .nav-tabs .dropdown-menu {
@@ -13918,10 +13918,20 @@ body {
 }
 .dropdown-toggle::after {
     /* display: inline-block; */
-    margin-left: .655em;
+    /* margin-left: .655em; */
     /* vertical-align: .255em; */
+    /* content: ""; */
+    /* color: white; */
+    /* border-top: .3em solid; */
+    /* border-right: .3em solid transparent; */
+    /* border-bottom: 0; */
+    /* border-left: .3em solid transparent; */
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .655em !important;
+    vertical-align: .155em !important;
     content: "";
-    color: white;
     border-top: .3em solid;
     border-right: .3em solid transparent;
     border-bottom: 0;

@@ -10716,3 +10716,26 @@ readers do not read off random characters that represent icons */
   color: #ffc107 !important;
   background-color: white !important;
 }
+.nav-close {
+  display: none;
+  background-image: url('../images/button-shape.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  background-position: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+a{
+  color: white !important;
+}
+
+.breadcrumb-row {
+  margin-bottom: 45px;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+  color: white !important;
+}

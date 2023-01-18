@@ -16,6 +16,7 @@ import Withdraw from '../pages/member_pages/Withdraw/Withdraw'
 import Promotion from "../pages/member_pages/Promotion/promotion"
 import Register from '../pages/member_pages/Register/register';
 
+
 const MainRoute = () => {
 
  
@@ -37,7 +38,11 @@ const MainRoute = () => {
     { path: "/account/statement" , element: <Statement />},
     { path:"/withdrawal",element:<Withdraw /> },
     { path:"/promotion", element:<Promotion/>},
-    { path:"/register/ref",element: <Register />}
+    { path:"/register" , element: <Register />}?{ path:"/register" , element: <Register />} :{ path:"/register/ref" , element: <Register />}
+    
+
+  
+
   ])
   return routes
 }
