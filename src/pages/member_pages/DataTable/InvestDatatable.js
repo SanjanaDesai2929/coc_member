@@ -22,7 +22,7 @@ const InvestDatatable = () => {
 
                 },
                 ajax: {
-                    url: "/demo/rtvk/ci_admin_api/coc22game/api/news/getAllNews",
+                    url: `/demo/rtvk/ci_admin_api/coc22game/api/news/getAllNews`,
 
                     headers: {
                         Authorization: "d200d1f41c0f1b45087d6e8a2158c382bce469daf7dc51dc28237a0822a08d86b7df15b7272aeee7a09191e0511ca96f8cdabb11b1bbae92ed0df86ef18d554altcbvyVgoGH+89DP5k7os7Q2VCfHDSCUl4gaAWeQzWM="

@@ -2,8 +2,8 @@ import React from 'react'
 import $ from 'jquery'
 
 const Withdrawaltable = () => {
-      // List Table
-      var TableDatatablesManaged = (function () {
+    // List Table
+    var TableDatatablesManaged = (function () {
         var initTable1 = function () {
             var table = $("#manage_tbl");
             var table1 = table.DataTable({
@@ -22,10 +22,10 @@ const Withdrawaltable = () => {
 
                 },
                 ajax: {
-                    url: "/demo/rtvk/ci_admin_api/coc22game/api/news/getAllNews",
+                    url: `/demo/rtvk/ci_admin_api/coc22game/api/news/getAllNews`,
 
                     headers: {
-                        Authorization: "d200d1f41c0f1b45087d6e8a2158c382bce469daf7dc51dc28237a0822a08d86b7df15b7272aeee7a09191e0511ca96f8cdabb11b1bbae92ed0df86ef18d554altcbvyVgoGH+89DP5k7os7Q2VCfHDSCUl4gaAWeQzWM="
+                        // Authorization: "d200d1f41c0f1b45087d6e8a2158c382bce469daf7dc51dc28237a0822a08d86b7df15b7272aeee7a09191e0511ca96f8cdabb11b1bbae92ed0df86ef18d554altcbvyVgoGH+89DP5k7os7Q2VCfHDSCUl4gaAWeQzWM="
 
                     },
                     type: "GET",
@@ -47,7 +47,7 @@ const Withdrawaltable = () => {
                             );
                         },
                     },
-                   
+
                 ],
 
                 order: [[2, "asc"]],
@@ -70,26 +70,26 @@ const Withdrawaltable = () => {
     });
     return (
         <>
- <table class="table table-striped datatable-values mt-1 manage_tbl dataTable no-footer" id="manage_tbl">
-            <thead>
-            <tr>
-    <th class="text-muted  border-0 text-center sorting_disabled" rowspan="1" colspan="1" aria-label="Sr No.">Sr No.</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Withdraw Amount: activate to sort column ascending">Withdraw Amount</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Withdraw Fee: activate to sort column ascending">Withdraw Fee</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Final Amount: activate to sort column ascending">Final Amount</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Wallet: activate to sort column ascending">Wallet</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Currency: activate to sort column ascending">Currency</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Status</th>
-    <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date</th>
-</tr>
+            <table class="table table-striped datatable-values mt-1 manage_tbl dataTable no-footer" id="manage_tbl">
+                <thead>
+                    <tr>
+                        <th class="text-muted  border-0 text-center sorting_disabled" rowspan="1" colspan="1" aria-label="Sr No.">Sr No.</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Withdraw Amount: activate to sort column ascending">Withdraw Amount</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Withdraw Fee: activate to sort column ascending">Withdraw Fee</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Final Amount: activate to sort column ascending">Final Amount</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Wallet: activate to sort column ascending">Wallet</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Currency: activate to sort column ascending">Currency</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Status</th>
+                        <th class="text-muted  border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date</th>
+                    </tr>
 
 
 
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
         </>
     )
 }
