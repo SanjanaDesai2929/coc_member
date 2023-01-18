@@ -25,7 +25,7 @@ var TableDatatablesManaged = (function () {
 
             },
             ajax: {
-                // url: "/demo/rtvk/ci_admin_api/coc22game/api/news/getAllNews",
+                url: "/demo/rtvk/ci_admin_api/coc22game/api/news/getAllNews",
 
                 headers: {
                     Authorization: "d200d1f41c0f1b45087d6e8a2158c382bce469daf7dc51dc28237a0822a08d86b7df15b7272aeee7a09191e0511ca96f8cdabb11b1bbae92ed0df86ef18d554altcbvyVgoGH+89DP5k7os7Q2VCfHDSCUl4gaAWeQzWM="
@@ -76,29 +76,7 @@ $(document).ready(function () {
             <div class="content-wrap">
                 <Breadcrumb value="Statement" />
                 {/* Search Bar  */}
-                <div class="row">
-                    {/* <div class="col-md-6 offset-md-3">
-                        <div class="mb-5">
-                            <h2 class="small-title" style={{ fontFamily: "clashregular", marginBottom: "13px" }}>Search Level</h2>
-                            <div class="card purple-box">
-                                <div class="card-body">
-                                    <form class="form-valide-with-icon" name="check_user" id="check_user" method="post" action="https://developerinfotech.com/demo/rtvk/ci_admin_api/">
-                                        <div class="mb-3 w-100">
-                                            <label for="level" class="form-label" style={{ fontFamily: "clashregular" }}>Level</label>
-                                            <select class="form-control select-single-no-search" name="level" id="level" style={{ fontFamily: "clashregular" }} onChange={handleChange}>
-                                                <option value="1"> Level - 1 </option>
-                                                <option value="2"> Level - 2 </option>
-
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 form_input_btn ">
-                                            <button type="submit" name="submit" id="search" value="Search" class="btn btn-primary  theme-btn">Search</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
+                <div class="row datatable-row">
                     {/* Referral Data  */}
                     <div class="col-lg-12 no-padding ">
                         <div class="purple-box table-box py-5 px-4 ">
@@ -113,16 +91,16 @@ $(document).ready(function () {
                                         <table class="table table-striped datatable-values mt-1 manage_tbl dataTable no-footer" id="manage_tbl">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-muted text-medium border-0 text-center sorting_disabled" rowspan="1" colspan="1" aria-label="SR">SR NO</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Username: activate to sort column ascending">From UseId</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Full Name: activate to sort column ascending">From UserName</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Credit</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Debit</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Balance</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Note</th>
-                                                    <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Date</th>
-                                                    {/* <th class="text-muted text-medium border-0 sorting_disabled" rowspan="1" colspan="1" aria-label="Activation Date">Debit</th> */}
-                                                    {/* <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Registration Date: activate to sort column ascending">Registration Date</th> */}
+                                                    <th class="text-muted border-0 text-center sorting_disabled" rowspan="1" colspan="1" aria-label="SR">SR NO.</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Username: activate to sort column ascending">From UserId</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Full Name: activate to sort column ascending">From UserName</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Credit</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Debit</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Balance</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Note</th>
+                                                    <th class="text-muted border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Date</th>
+                                                    {/* <th class="text-muted text-medium border-0 sorting" tabindex="0" aria-controls="manage_tbl" rowspan="1" colspan="1" aria-label="Investment: activate to sort column ascending">Date</th> */}
+                                                
                                                 </tr>
                                             </thead>
                                             <tbody>

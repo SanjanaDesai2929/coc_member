@@ -25,7 +25,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={queen} alt="logo" class="img-fluid queen" />
+                  <img src={queen} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Main Wallet</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/account_history" role="button">History</a>
@@ -35,7 +35,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={warden_min} alt="logo" class="img-fluid queen" />
+                  <img src={warden_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Active Package</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/subscriber/add_balance" role="button">Upgrade</a>
@@ -45,7 +45,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={flying_min} alt="logo" class="img-fluid queen" />
+                  <img src={flying_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Pending  Withdraw</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary  theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/withdrawal" role="button">Update</a>
@@ -55,7 +55,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={roayl_champ_min} alt="logo" class="img-fluid queen" />
+                  <img src={roayl_champ_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Paid  Withdraw</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/withdrawal" role="button">Update</a>
@@ -65,7 +65,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={queen_2_min} alt="logo" class="img-fluid queen" />
+                  <img src={queen_2_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Daily Treasure</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/roi_income" role="button">Check</a>
@@ -75,7 +75,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={warden_2_min} alt="logo" class="img-fluid queen" />
+                  <img src={warden_2_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Super Resources</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/team_revenue" role="button">Check</a>
@@ -85,7 +85,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={ballon_min} alt="logo" class="img-fluid queen" />
+                  <img src={ballon_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Referral Revenue</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/referral_revenue" role="button">Check</a>
@@ -95,7 +95,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={dragon_min} alt="logo" class="img-fluid queen" />
+                  <img src={dragon_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">League Reward</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/league_reward" role="button">Check</a>
@@ -105,7 +105,7 @@ const Home = () => {
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 balance-col mb-lg-4">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={goblin_min} alt="logo" class="img-fluid queen" />
+                  <img src={goblin_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Clan League Reward</h3>
                   <h2 class="coin-balance"><img src={coin} alt="$" class="img-fluid pe-2" /> 0.00</h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/clan_league_rewards" role="button">Check</a>
@@ -115,7 +115,7 @@ const Home = () => {
             <div class="col-md-6 col-12">
               <div class="col-inner balance-card text-end">
                 <div class="card-header">
-                  <img src={barbarian_min} alt="logo" class="img-fluid queen" />
+                  <img src={barbarian_min} alt="logo" class="img-fluid queen1" />
                   <h3 class="card-title">Clan League Reward Level</h3>
                   <h2 class="coin-balance">Level: 0 </h2>
                   <a class="btn btn-primary theme-btn" href="https://developerinfotech.com/demo/rtvk/ci_admin_api/account/clan_league_rewards" role="button">Check</a>
