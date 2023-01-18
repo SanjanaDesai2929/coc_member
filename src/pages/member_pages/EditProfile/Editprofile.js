@@ -437,7 +437,7 @@ const {
                             <div className="purple-box text-center text-white h-100">
                                 <div className="profile-img">
                                     {/* <img src="<?= base_url(); ?><?= $this->profile_image.'120x120_'.$user_image; ?>" alt="profile" className="img-fluid rounded-circle" /> */}
-                                    <img src="<?php echo $this->template_images; ?>phone_min.jpg" className="img-fluid rounded-circle" alt="" width="120px" height="120px" />
+                                    <img src="" className="img-fluid rounded-circle" alt="" width="120px" height="120px" />
                                 </div>
                                 <div className="profile-info purple-budge-body pb-4 px-4 px-lg-5">
                                     <h2>COC428789</h2>
@@ -513,7 +513,7 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input className="form-control"  style={{fontFamiy:'clashregular'}} type="file" name="profilepicter" id="profilePic" aria-label="Profile Picture" />
+                                                <input  style={{fontFamiy:'clashregular'}} type="file" name="profilepicter"  className="form-control" id="profilePic" aria-label="Profile Picture" />
                                                 <input name="old_profile_pic"  type="hidden" onChange={handleChange1} classNameName={profilepicterIdErr ? " showError" : ""} value={state.profilepicter} />
                                                 <div>
                                                     {profilepicterIdErr && (

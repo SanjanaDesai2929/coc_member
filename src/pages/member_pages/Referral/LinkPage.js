@@ -47,7 +47,7 @@ const LinkPage = () => {
                                      <div class="copy  w-100">
                                         <input type="text" class="form-control" value={`${window.location.origin}/promotion?ref=COC428789`} id="prolink"  style={{fontFamily:"clashregular",padding:" 0 25px",height:"62px",fontSize:"1.001rem"}}/>
                                         <div class="d-flex justify-content-center mt-4">
-                                            <button onClick={()=>copyRefLink('prolink',`${window.location.origin}/promotion?ref=COC428789'`)} class="theme-btn text-white me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">
+                                            <button onClick={()=>copyRefLink('prolink',`${window.location.origin}/promotion?ref=COC428789`)} class="theme-btn text-white me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">
                                                 Copy
                                             </button>
                                             <a href={`${window.location.origin}/promotion?ref=COC428789`} target="_blank" class="theme-btn text-white " data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Link">

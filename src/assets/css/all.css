@@ -43,6 +43,7 @@ input#profilePic {
 
 .footer_social ul li {
   margin-right: 15px;
+  display: block;
 }
 
 .wallpper {
@@ -153,7 +154,7 @@ input[type="file"]:focus {
 
 input[type="file"]::file-selector-button {
   /* border: 2px solid #b154f0; */
-  padding: 0.2em 0.4em;
+  /* padding: 0.2em 0.4em; */
   border-radius: 0.2em;
   background-color: #b154f0;
   transition: 1s;
@@ -10738,4 +10739,40 @@ a{
 }
 .table-striped>tbody>tr:nth-of-type(odd)>*{
   color: white !important;
+}
+.modal-content {
+  background-color: #b154f0 !important;
+  border: 1px solid rgb(254 185 119) !important;
+}
+.modal-header{
+  font-family: "clashregular";
+padding:1px 16px !important;
+/* padding-left: 10px !important; */
+}
+.modal-title{
+  font-size: 1.8rem!important;
+  font-family: "clashregular";
+
+}
+.modal-dialog {
+  max-width:fit-content !important;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: -webkit-fill-available !important;
+  /* margin-top: 200px !important; */
+}
+.form-label{
+  font-family: "clashregular";
+
+}
+.form-control1{
+  height: 62px !important;
+}
+.state-error{
+  font-family: "clashregular";
+
+}
+.font-user{
+  font-family: "clashregular";
+
 }

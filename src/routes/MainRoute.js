@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import { useRoutes, useNavigate } from "react-router-dom";
+
 import Home from '../pages/member_pages/Home';
 import List from '../pages/member_pages/Referral/List';
 import EditProfile from '../pages/member_pages/EditProfile/Editprofile'
@@ -18,11 +19,10 @@ import Register from '../pages/member_pages/Register/register';
 
 
 const MainRoute = () => {
-
- 
- 
+  const Navigate =  useNavigate()
 // Member Routing 
   const routes = useRoutes([
+
     { path: "/dashboard", element: <Home /> },
     { path: "/trafficflow/referral_list", element: <List /> },
     { path: "/referral", element: <LinkPage /> },
@@ -38,11 +38,10 @@ const MainRoute = () => {
     { path: "/account/statement" , element: <Statement />},
     { path:"/withdrawal",element:<Withdraw /> },
     { path:"/promotion", element:<Promotion/>},
-    { path:"/register" , element: <Register />}?{ path:"/register" , element: <Register />} :{ path:"/register/ref" , element: <Register />}
+    { path:"/register" , element: <Register  />},
+    // { path:"/register" , element: <Register  />? <Navigate replace to={"/ref"} />:""}
+
     
-
-  
-
   ])
   return routes
 }
