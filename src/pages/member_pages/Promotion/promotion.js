@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState,} from "react";
+import { NavLink , useParams,useLocation, useSearchParams } from "react-router-dom";
 import coc from "../../../assets/images/coc.png"
 import twitter from "../../../assets/images/twitter.png"
 import discord from "../../../assets/images/discord.png"
@@ -13,6 +13,16 @@ import clashofclans from "../../../assets/images/27795-1-clash-of-clans-picture.
 const Promotion = () => {
     const [state, setState] = useState()
 
+    let id  = useLocation().search;
+    let user= new URLSearchParams(id).get('ref');
+    console.log(`${window.location.origin}/register/ref/${user}`);
+    console.log(user,"aaa");
+    // const id = document.getElementById("/register/ref/{id}")
+
+
+    // const { search } = useLocation();
+    // const id = new URLSearchParams(search).get("id");
+    // console.log(id);
 
     return (
         <>
@@ -30,7 +40,8 @@ const Promotion = () => {
                                             <div class="content">
                                                 <p class="installfont">Join Clash of Clans Special Offer to get Referral Revenue, Daily Treasure, League Reward, Clan League Reward, etc...</p>
                                                 <p class="install">Click on the below button to get started.</p>
-                                                <NavLink className="btn mt-3 install now register" target="_blank" to="/register" >Register Now</NavLink>
+                                                {/* <NavLink className="btn mt-3 install now register" target="_blank" to="/register/ref/COC428789" >Register Now</NavLink> */}
+                                                <a className="btn mt-3 install now register" target="_blank" href={`/register/ref/${user}`} >Register Now</a>
                                                 <div class="footer_widget_list">
                                                     <div class="footer_social">
                                                         <ul class="d-flex flex-wrap flex-md-nowrap justify-content-center mt-5">
@@ -46,6 +57,7 @@ const Promotion = () => {
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                     <div class="col-xl-8 col-lg-8 col-12 mx-auto text-center d-none d-lg-flex align-items-center justify-content-center imgwith">
                                         <img class="img-fluid" src={clashofclans} alt="" />

@@ -554,7 +554,7 @@ const {
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="form_input">
-                                                <input type="tel" id="phone" className={`form-control${ponenumberIdErr ? " showError" : ""}`} name="pone_no" onChange={handleChange} value={state.pone_no} placeholder="Enter Phone No" />
+                                                <input type="tel" id="phone" maxlength="10" className={`form-control${ponenumberIdErr ? " showError" : ""}`} name="pone_no" onChange={handleChange} value={state.pone_no} placeholder="Enter Phone No" />
                                                 <div>
                                                     {ponenumberIdErr && (
                                                         <div
@@ -599,6 +599,7 @@ const {
                                                     <option value="rajkot">rajkot</option>
                                                     <option value="surat">surat</option>
 
+                                                </select>
                                                     <div>
                                                         {countrynameIdErr && (
                                                             <div
@@ -613,7 +614,6 @@ const {
                                                             </div>
                                                         )}
                                                     </div>
-                                                </select>
                                             </div>
                                         </div>
                                         <div className="col-lg-6">

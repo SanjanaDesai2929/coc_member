@@ -54,6 +54,13 @@ input#profilePic {
   background-position: left;
 }
 
+.wallpper1 {
+  background-image: url("../images/breadcrumbs-bg.webp");
+  background-size: cover ;
+  background-color: #140e38 ;
+  height: 100% !important;
+  background-position: left ;
+}
 .register {
   background-image: url("../images/btn-bg.webp");
   background-color: #09042F;
@@ -81,9 +88,9 @@ input[value=""] {
   background-color: #09042F;
 }
 
-.btn:hover{
+/* .btn:hover{
   background-color: #09042F !important;
-}
+} */
 select#country_name:focus {
   /* font-family: 'clashregular'; */
   border: 2px solid #86b7fe !important;
@@ -117,6 +124,12 @@ input[type=text]:focus {
   border: 2px solid #86b7fe !important;
 }
 
+input[type=email]:focus {
+  border: 2px solid #86b7fe !important;
+}
+input[type=tel]:focus {
+  border: 2px solid #86b7fe !important;
+}
 input[type=password]:focus {
   border: 2px solid #86b7fe !important;
 }
@@ -138,6 +151,51 @@ input[type=password]:focus {
   font-family: 'clashregular';
   font-size: 16px;
   color: white;
+}
+
+h2.signup{
+  font-size: 55px ;
+    line-height: 72px ;
+    font-weight: 700 ;
+    color: #ffffff ;
+    font-family: 'clashregular';
+    text-transform: uppercase ;
+}
+strong.theme-text{
+  color: white !important;
+  font-family: 'clashregular';
+}
+
+button.btn{
+  font-size: 20px ;
+  font-family: 'clashregular';
+}
+.register1 {
+  background-image: url("../images/btn-bg.webp");
+  /* background-color: #09042F; */
+  background-size: cover;
+  width: 232px;
+  height: 73px;
+  font-size: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  line-height: 73px;
+  /* padding: 0 15px; */
+  background-repeat: no-repeat;
+  background-position: center ;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.account{
+  font-size: 176x ;
+  font-family: 'clashregular';
+  color: white;
+  padding-top: 40px;
+}
+.account1:hover{
+  color: #b154f0  !important;
 }
 
 /* .from_input input:focus{  

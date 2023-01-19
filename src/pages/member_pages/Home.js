@@ -13,49 +13,49 @@ import goblin_min from "../../assets/images/goblin_min.png"
 import barbarian_min from "../../assets/images/barbarian_min.png"
 import unranked_1 from "../../assets/images/unranked_1.png"
 import { NavLink } from 'react-router-dom'
-import Chart from 'chart.js/auto';
+// import Chart from 'chart.js/auto';
 import $ from "jquery"
 
 const Home = () => {
-  $(document).ready(function () {
-    var ctx = document.getElementById("incomeChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Daily Treasure', 'Super Resources', 'Referral Revenue', 'Clan League Reward', 'League Reward'],
-        datasets: [{
-          label: '# of Votes',
-          // data: "",
-          data: [ 0,0,1,0,0],
+  // $(document).ready(function () {
+  //   var ctx = document.getElementById("incomeChart").getContext('2d');
+  //   var myChart = new Chart(ctx, {
+  //     type: 'pie',
+  //     data: {
+  //       labels: ['Daily Treasure', 'Super Resources', 'Referral Revenue', 'Clan League Reward', 'League Reward'],
+  //       datasets: [{
+  //         label: '# of Votes',
+  //         // data: "",
+  //         data: [ 0,0,1,0,0],
 
-          backgroundColor: [
-            '#b154f070',
-            'rgba(54, 162, 235, 0.7)',
-            'rgba(255, 206, 86, 0.7)',
-            'rgba(75, 192, 192, 0.7)',
-            '#df4c2170'
-          ],
-          borderColor: [
-            '#b154f080',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            '#df4c21'
-          ],
-          borderWidth: 2,
-          scaleFontColor: "#FFFFFF"
-        }]
-      },
-      options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        },
+  //         backgroundColor: [
+  //           '#b154f070',
+  //           'rgba(54, 162, 235, 0.7)',
+  //           'rgba(255, 206, 86, 0.7)',
+  //           'rgba(75, 192, 192, 0.7)',
+  //           '#df4c2170'
+  //         ],
+  //         borderColor: [
+  //           '#b154f080',
+  //           'rgba(54, 162, 235, 1)',
+  //           'rgba(255, 206, 86, 1)',
+  //           'rgba(75, 192, 192, 1)',
+  //           '#df4c21'
+  //         ],
+  //         borderWidth: 2,
+  //         scaleFontColor: "#FFFFFF"
+  //       }]
+  //     },
+  //     options: {
+  //       scales: {
+  //           y: {
+  //               beginAtZero: true
+  //           }
+  //       },
       
-    }
-    });
-  })
+  //   }
+  //   });
+  // })
   const [state, setState] = useState({})
   // const data = sessionStorage.getItem("admin")
   // const admin_data = JSON.parse(data)
