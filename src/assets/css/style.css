@@ -815,11 +815,13 @@
       padding: 0px !important;
       text-indent: 25px;
       border: 1px solid #6f42c1;
+      color: #212529 !important;
     }
 
     .form-control[type="file"] {
       padding: 4px !important;
       text-indent: 0px;
+      color: white !important;
     }
 
     .form-control::file-selector-button {

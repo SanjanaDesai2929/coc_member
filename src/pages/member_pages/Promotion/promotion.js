@@ -15,8 +15,8 @@ const Promotion = () => {
 
     let id  = useLocation().search;
     let user= new URLSearchParams(id).get('ref');
-    console.log(`${window.location.origin}/register/ref/${user}`);
-    console.log(user,"aaa");
+    // console.log(`${window.location.origin}/register/ref/${user}`);
+    // console.log(user,"aaa");
     // const id = document.getElementById("/register/ref/{id}")
 
 
