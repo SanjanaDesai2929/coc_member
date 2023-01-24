@@ -17,30 +17,22 @@ const Register = () => {
         country_name: "",
     })
 
-    // const handleChange = (e) => {
-    //     var sing = (state !== abc[0])
-    //     var formIsValid
-    //     var formErrors 
-    //     // if  {
-    //     //     formIsValid = false;
-    //     //     formErrors= "Please enter valid referral name!.";
-    //     // } else {
-    //         const { name, value } = e.target;
-    
-    //         setState({
-    //             ...state,
-    //             [name]: value
-    //         })
-    //     // }
-    // }
+    const handleChange = (e) => {
+        var sing = (state !== abc[0])
+        // var formIsValid
+        // var formErrors 
+        if (sing) {
+            const { name, value } = e.target;
 
-    const handleChange =(e) =>{
-        const {name , value} = e.target
-
-        setState({
-            ...state,
-            [name]:value
-        })
+            setState({
+                ...state,
+                [name]: value
+            })
+        } 
+        // else {
+        // formIsValid = false;
+        // formErrors= "Please enter valid referral name!.";
+        // }    
     }
 
     const errorData = () => {
@@ -81,6 +73,7 @@ const Register = () => {
         //     formErrors["ponenumberIdErr"] = "Invalid email id.";
         // }
 
+        
         if (!email) {
             formIsValid = true;
             formErrors["emailIdErr"] = "Please Enter email.";
