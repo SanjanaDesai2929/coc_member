@@ -7,8 +7,6 @@ import Select from 'react-select';
 
 const Register = () => {
     const params = useParams()
-
-    const [state1, setState1] = useState();
     const [abc, setAbc] = useState("")
     const [error, setError] = useState({ formErrors: {} });
     const [state, setState] = useState({
@@ -19,26 +17,35 @@ const Register = () => {
         country_name: "",
     })
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    // const handleChange = (e) => {
+    //     var sing = (state !== abc[0])
+    //     var formIsValid
+    //     var formErrors 
+    //     // if  {
+    //     //     formIsValid = false;
+    //     //     formErrors= "Please enter valid referral name!.";
+    //     // } else {
+    //         const { name, value } = e.target;
+    
+    //         setState({
+    //             ...state,
+    //             [name]: value
+    //         })
+    //     // }
+    // }
+
+    const handleChange =(e) =>{
+        const {name , value} = e.target
 
         setState({
             ...state,
-            [name]: value
+            [name]:value
         })
     }
 
-    // useEffect(() => {
-    //     errorData();
-    // }, []);
-
     const errorData = () => {
-        const {
-            sponser_id,
-            fullname,
-            phone,
-            email,
-            country_name,
+        
+        const {sponser_id, fullname,phone, email, country_name,
         } = state;
         let formErrors = {};
         let formIsValid = true;
@@ -47,11 +54,11 @@ const Register = () => {
             formIsValid = true;
             formErrors["sponseridrr"] = "Please Enter Username.";
         }
-        else if (state.sponser_id !== abc[0].member_username) {
-            formIsValid = false;
-            formErrors["sponseridrr"] = "Please enter valid referral username!.";
+        else if(state.sponser_id !== abc[0].member_username){
+            formIsValid = true;
+            formErrors["sponseridrr"] = "Please enter  valid referral username.";
         }
-
+       
         if (!fullname) {
             formIsValid = true;
             formErrors["fullnameIdErr"] = "Please enter display name!";
@@ -63,16 +70,16 @@ const Register = () => {
 
         if (!phone) {
             formIsValid = true;
-            formErrors["ponenumberIdErr"] = "Please enter phone number!.";
+            formErrors["ponenumberIdErr"] = "Please Enter phone number.";
         }
         else if (state.phone !== abc[0].member_phone) {
-            formIsValid = false;
+            formIsValid = true;
             formErrors["ponenumberIdErr"] = "Please enter valid referral phone!.";
         }
-        else if (!/^(?:(?:\\+|0{0,2})91(\s*[\\-]\s*)?|[0]?)?[789]\d{9}$/.test(phone)) {
-            formIsValid = true;
-            formErrors["ponenumberIdErr"] = "Please enter phone number!";
-        }
+        // else if (!/^(?:(?:\\+|0{0,2})91(\s*[\\-]\s*)?|[0]?)?[789]\d{9}$/.test(phone)) {
+        //     formIsValid = true;
+        //     formErrors["ponenumberIdErr"] = "Invalid email id.";
+        // }
 
         if (!email) {
             formIsValid = true;
@@ -86,9 +93,9 @@ const Register = () => {
             formErrors["emailIdErr"] = "Please enter valid referral email!.";
         }
 
-        if (!country_name) {
-            formIsValid = true;
-            formErrors["countrynameIdErr"] = "Please select country!.";
+        if(!country_name){
+            formIsValid =  true;
+            formErrors["countrynameIdErr"] = "Please select country"
         }
 
         setError({ formErrors: formErrors });
@@ -98,7 +105,7 @@ const Register = () => {
     async function from() {
         errorData();
 
-        console.log(state);
+        console.log(state, 'ffff');
         const response = await fetch("/demo/rtvk/ci_admin_api/coc22member/api/User/register/", {
             method: "POST",
             headers: {
@@ -116,7 +123,6 @@ const Register = () => {
     const handelsubmit = (e) => {
         e.preventDefault();
         from()
-
     };
 
     const [state2, setState2] = useState("")
@@ -131,9 +137,7 @@ const Register = () => {
 
 
     useEffect(() => {
-
         async function Data() {
-
             const texClone = await fetch("/demo/rtvk/ci_admin_api/coc22member/api/user/getAllMember", {
                 method: "GET",
                 headers: {
@@ -157,15 +161,9 @@ const Register = () => {
             })
 
             setAbc(data_response && data_response);
-
-            // console.log(data_response , "hello");
-
             setUser(data_response && data_response[0].member_fullname)
 
             // console.log(data_response && data_response[0].member_username, "adadadada");
-            // console.log(data_response && data_response[0].member_fullname,"addada");
-
-            // console.log(user && user, "aaaa");
 
         }
         Data();
@@ -181,7 +179,9 @@ const Register = () => {
             [name]: value
         })
     }
+
     async function country() {
+
         const good = await fetch("/demo/rtvk/ci_admin_api/coc22member/api/User/getAllCountry", {
             method: "GET",
             headers: {
@@ -189,7 +189,7 @@ const Register = () => {
             },
         });
         const res_response2 = await good.json();
-        // console.log(res_response2.message, "fddfs");
+        console.log(res_response2.message, "fddfs");
         // setDemo(res_response2.message)
 
         const options = []
@@ -200,8 +200,7 @@ const Register = () => {
             })
         })
 
-
-        console.log(demo && demo , "aaa");
+        // console.log(demo && demo, "aaa");
         // const data_res = res_response2.message.filter((data) => {
         //     return data.country_id == state.country_name
         // })
@@ -209,9 +208,8 @@ const Register = () => {
         // console.log(data_res && data_res[0].country_name, "dsdfsdf");
 
         setDemo(options)
-        console.log(options, "fsfsfs");
+        // console.log(options, "fsfsfs");
     }
-
 
     const {
         sponseridrr,
@@ -323,12 +321,12 @@ const Register = () => {
                                                 <select id="country_name" style={{ fontFamiy: 'clashregular' }} name="country_name"
                                                     className={`form-control ${countrynameIdErr ? " showError" : ""}`} onChange={handleChange}
                                                     placeholder="--Country--" value={state.country_name} >
-                                                    <option  className="form-control">-- Country-- </option>
+                                                    <option className="form-control">-- Country-- </option>
                                                     {demo.map((person, index) => (
                                                         <option key={index} value={person.value} >
-                                                          {person.label}
+                                                            {person.label}
                                                         </option>
-                                                    ))} 
+                                                    ))}
                                                 </select>
 
                                                 {/* <Select
@@ -343,7 +341,7 @@ const Register = () => {
                                                     placeholder="--Country--"
                                                     onChange={date => handleChange({ target: { value: date } })}
 
-                                                    defaultValue={{ value:state.country_name, label: state1 && state1 }}
+                                                    defaultValue={{ value:state.value, label: state1 && state1.label }}
                                                 /> */}
 
                                                 <div>

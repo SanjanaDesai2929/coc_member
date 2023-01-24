@@ -39,7 +39,7 @@ const LeagueReward = () => {
   return (
     <>
       <MemberTheme>
-        
+
         <Modal show={basic} onHide={handleClose} >
           <Modal.Header>
             <Modal.Title>League Reward Level</Modal.Title>
@@ -48,79 +48,79 @@ const LeagueReward = () => {
             </Button>
           </Modal.Header>
           <Modal.Body>
-          <div class="table-responsive">
-                        <table class="table text-light mb-0">
-                            <thead>
-                                <tr>
-                                    <th>Level</th>
-                                    <th>Name</th>
-                                    <th>Strong Side</th>
-                                    <th>Other Side</th>
-                                    <th>Bonus (COC)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                                    <tr>
-                                                    <td>1 </td>
-                                                    <td>Bronze </td>
-                                                    <td>10000 COC</td>
-                                                    <td>10000 COC</td>
-                                                    <td>400 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>2 </td>
-                                                    <td>Silver </td>
-                                                    <td>20000 COC</td>
-                                                    <td>20000 COC</td>
-                                                    <td>500 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>3 </td>
-                                                    <td>Gold </td>
-                                                    <td>40000 COC</td>
-                                                    <td>40000 COC</td>
-                                                    <td>1000 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>4 </td>
-                                                    <td>Crystal </td>
-                                                    <td>60000 COC</td>
-                                                    <td>60000 COC</td>
-                                                    <td>1500 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>5 </td>
-                                                    <td>Master </td>
-                                                    <td>100000 COC</td>
-                                                    <td>100000 COC</td>
-                                                    <td>5000 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>6 </td>
-                                                    <td>Champion </td>
-                                                    <td>200000 COC</td>
-                                                    <td>200000 COC</td>
-                                                    <td>10000 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>7 </td>
-                                                    <td>Titan </td>
-                                                    <td>400000 COC</td>
-                                                    <td>400000 COC</td>
-                                                    <td>20000 COC</td>
-                                                </tr>
-                                                                                                <tr>
-                                                    <td>8 </td>
-                                                    <td>Legend </td>
-                                                    <td>1000000 COC</td>
-                                                    <td>1000000 COC</td>
-                                                    <td>50000 COC</td>
-                                                </tr>
-                                                
-                                </tbody>
+            <div class="table-responsive">
+              <table class="table text-light mb-0">
+                <thead>
+                  <tr>
+                    <th>Level</th>
+                    <th>Name</th>
+                    <th>Strong Side</th>
+                    <th>Other Side</th>
+                    <th>Bonus (COC)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1 </td>
+                    <td>Bronze </td>
+                    <td>10000 COC</td>
+                    <td>10000 COC</td>
+                    <td>400 COC</td>
+                  </tr>
+                  <tr>
+                    <td>2 </td>
+                    <td>Silver </td>
+                    <td>20000 COC</td>
+                    <td>20000 COC</td>
+                    <td>500 COC</td>
+                  </tr>
+                  <tr>
+                    <td>3 </td>
+                    <td>Gold </td>
+                    <td>40000 COC</td>
+                    <td>40000 COC</td>
+                    <td>1000 COC</td>
+                  </tr>
+                  <tr>
+                    <td>4 </td>
+                    <td>Crystal </td>
+                    <td>60000 COC</td>
+                    <td>60000 COC</td>
+                    <td>1500 COC</td>
+                  </tr>
+                  <tr>
+                    <td>5 </td>
+                    <td>Master </td>
+                    <td>100000 COC</td>
+                    <td>100000 COC</td>
+                    <td>5000 COC</td>
+                  </tr>
+                  <tr>
+                    <td>6 </td>
+                    <td>Champion </td>
+                    <td>200000 COC</td>
+                    <td>200000 COC</td>
+                    <td>10000 COC</td>
+                  </tr>
+                  <tr>
+                    <td>7 </td>
+                    <td>Titan </td>
+                    <td>400000 COC</td>
+                    <td>400000 COC</td>
+                    <td>20000 COC</td>
+                  </tr>
+                  <tr>
+                    <td>8 </td>
+                    <td>Legend </td>
+                    <td>1000000 COC</td>
+                    <td>1000000 COC</td>
+                    <td>50000 COC</td>
+                  </tr>
 
-                        </table>
-                    </div>
+                </tbody>
+
+              </table>
+            </div>
           </Modal.Body>
 
         </Modal>

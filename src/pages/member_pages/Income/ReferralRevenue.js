@@ -6,12 +6,12 @@ import MemberTheme from '../theme/MemberTheme'
 
 const ReferralRevenue = () => {
   const [state, setState] = useState({})
-  
+
   // const data = sessionStorage.getItem("admin")
   // const admin_data = JSON.parse(data)
   const homeData = async () => {
-    const fromdata=new FormData()
-    fromdata.append("member_id",3)
+    const fromdata = new FormData()
+    fromdata.append("member_id", 3)
     var response = await fetch(`/demo/rtvk/ci_admin_api/coc22game/api/Commondata`, {
       method: "POST",
       headers: {
@@ -30,32 +30,32 @@ const ReferralRevenue = () => {
     homeData()
   }, [])
   return (
-<>
-<MemberTheme>
-   <div class="content-wrap">
-            <Breadcrumb value="Referral Revenue"/>
-              <div class="row datatable-row">
-                <div class="col-lg-12 no-padding ">
-                    <div class="purple-box table-box py-5 px-4 ">
-                        <div class="row align-items-center mb-4">
-                            <div class="col-lg-5 col-md-4 mb-3 mb-md-0 text-md-start text-center">
-                            <h4 class="table-title mb-md-0">Referral Revenue</h4>
-                            </div>
-                            <div class="col-lg-7 col-md-8 text-md-end text-center ">
-                                <span class="balance-info">Total Referral Revenue: {state.total_referral_revenue}</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 mb-3">
-                             <ReferralRevenueTable/>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div> 
+    <>
+      <MemberTheme>
+        <div class="content-wrap">
+          <Breadcrumb value="Referral Revenue" />
+          <div class="row datatable-row">
+            <div class="col-lg-12 no-padding ">
+              <div class="purple-box table-box py-5 px-4 ">
+                <div class="row align-items-center mb-4">
+                  <div class="col-lg-5 col-md-4 mb-3 mb-md-0 text-md-start text-center">
+                    <h4 class="table-title mb-md-0">Referral Revenue</h4>
+                  </div>
+                  <div class="col-lg-7 col-md-8 text-md-end text-center ">
+                    <span class="balance-info">Total Referral Revenue: {state.total_referral_revenue}</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-3">
+                    <ReferralRevenueTable />
+                  </div>
+                </div>
+              </div>
             </div>
-            </MemberTheme>
-</>
+          </div>
+        </div>
+      </MemberTheme>
+    </>
   )
 }
 
