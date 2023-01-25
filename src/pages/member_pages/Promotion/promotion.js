@@ -19,11 +19,6 @@ const Promotion = () => {
     // console.log(user,"aaa");
     // const id = document.getElementById("/register/ref/{id}")
 
-
-    // const { search } = useLocation();
-    // const id = new URLSearchParams(search).get("id");
-    // console.log(id);
-
     return (
         <>
             <body class="body__bg" data-bgimg="">

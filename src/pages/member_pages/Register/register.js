@@ -8,6 +8,9 @@ import Select from 'react-select';
 const Register = () => {
     const params = useParams()
     const [abc, setAbc] = useState("")
+    const [hello, setHello] = useState("")
+    const [hello1, setHello1] = useState("")
+
     const [error, setError] = useState({ formErrors: {} });
     const [state, setState] = useState({
         sponser_id: params && params.id,
@@ -18,26 +21,21 @@ const Register = () => {
     })
 
     const handleChange = (e) => {
-        var sing = (state !== abc[0])
-        // var formIsValid
-        // var formErrors 
-        if (sing) {
-            const { name, value } = e.target;
+        // var sing = (state !== abc[0])
+        // console.log(sing,"aaaaa");
 
-            setState({
-                ...state,
-                [name]: value
-            })
-        } 
-        // else {
-        // formIsValid = false;
-        // formErrors= "Please enter valid referral name!.";
-        // }    
+        // if (state !== abc[0]) {
+        const { name, value } = e.target;
+        setState({
+            ...state,
+            [name]: value
+        })
+        // }
     }
 
     const errorData = () => {
-        
-        const {sponser_id, fullname,phone, email, country_name,
+
+        const { sponser_id, fullname, phone, email, country_name,
         } = state;
         let formErrors = {};
         let formIsValid = true;
@@ -46,34 +44,25 @@ const Register = () => {
             formIsValid = true;
             formErrors["sponseridrr"] = "Please Enter Username.";
         }
-        else if(state.sponser_id !== abc[0].member_username){
+        else if (state.sponser_id !== abc[0].member_username) {
             formIsValid = true;
             formErrors["sponseridrr"] = "Please enter  valid referral username.";
         }
-       
+
         if (!fullname) {
             formIsValid = true;
             formErrors["fullnameIdErr"] = "Please enter display name!";
         }
-        else if (state.fullname !== abc[0].member_fullname) {
-            formIsValid = false;
-            formErrors["fullnameIdErr"] = "Please enter valid referral name!.";
+
+        if (state2) {
+            if (state.status == 400) {
+                if (state2 == "member_email") {
+                    formIsValid = true;
+                    formErrors["emailIdErr"] = "Email already exist!"
+                }
+            }
         }
 
-        if (!phone) {
-            formIsValid = true;
-            formErrors["ponenumberIdErr"] = "Please Enter phone number.";
-        }
-        else if (state.phone !== abc[0].member_phone) {
-            formIsValid = true;
-            formErrors["ponenumberIdErr"] = "Please enter valid referral phone!.";
-        }
-        // else if (!/^(?:(?:\\+|0{0,2})91(\s*[\\-]\s*)?|[0]?)?[789]\d{9}$/.test(phone)) {
-        //     formIsValid = true;
-        //     formErrors["ponenumberIdErr"] = "Invalid email id.";
-        // }
-
-        
         if (!email) {
             formIsValid = true;
             formErrors["emailIdErr"] = "Please Enter email.";
@@ -81,13 +70,30 @@ const Register = () => {
             formIsValid = true;
             formErrors["emailIdErr"] = "Invalid email id.";
         }
-        else if (state.email !== abc[0].member_email) {
-            formIsValid = false;
+        else if (state.email == abc[0].member_email) {
+            formIsValid = true;
             formErrors["emailIdErr"] = "Please enter valid referral email!.";
         }
 
-        if(!country_name){
-            formIsValid =  true;
+        if (!phone) {
+            formIsValid = true;
+            formErrors["ponenumberIdErr"] = "Please Enter phone number.";
+        }
+        else if (!/[0-9]+$/.test(phone)) {
+            formIsValid = true;
+            formErrors["ponenumberIdErr"] = "Invalid phone number!.";
+        }
+        else if (state.phone == abc[0].member_phone) {
+            formIsValid = true;
+            formErrors["ponenumberIdErr"] = "Please enter valid referral phone!.";
+        }
+        // else if(state.phone == state2[0].member_phone){
+        //     formIsValid = true;
+        //     formErrors["ponenumberIdErr"] = "Please enter valid referral phone!.";
+        // }
+
+        if (!country_name) {
+            formIsValid = true;
             formErrors["countrynameIdErr"] = "Please select country"
         }
 
@@ -128,7 +134,6 @@ const Register = () => {
         })
     }
 
-
     useEffect(() => {
         async function Data() {
             const texClone = await fetch("/demo/rtvk/ci_admin_api/coc22member/api/user/getAllMember", {
@@ -139,7 +144,9 @@ const Register = () => {
             });
             const response_data = await texClone.json();
             console.log(response_data, "abcaa")
-            // setState2(response_data)
+            setState2(response_data)
+
+            console.log(state2, "lll");
 
             // const options=[]
             // // console.log(options,"dfsf");
@@ -150,13 +157,28 @@ const Register = () => {
             // })
 
             const data_response = response_data.filter((data_response) => {
-                return (data_response.member_username == state.sponser_id)
+                return data_response.member_username == state.sponser_id
+            })
+
+            const data_response1 = response_data.filter((data_response) => {
+                return data_response.member_email !== state.email
+            })
+
+            const data_response2 = response_data.filter((data_response) => {
+                return data_response.member_phone !== state.phone
             })
 
             setAbc(data_response && data_response);
-            setUser(data_response && data_response[0].member_fullname)
+            setHello(data_response1 && data_response1);
+            setHello1(data_response2 && data_response2);
 
-            // console.log(data_response && data_response[0].member_username, "adadadada");
+            setUser(data_response && data_response[0].member_fullname)
+            console.log(state2 && state2, "mmmmmmm");
+            console.log(state, "asdasd");
+
+            console.log(data_response && data_response, "adadad");
+            console.log(data_response1 && data_response1, "pqr");
+            console.log(data_response2 && data_response2, "xyz");
 
         }
         Data();
@@ -182,7 +204,7 @@ const Register = () => {
             },
         });
         const res_response2 = await good.json();
-        console.log(res_response2.message, "fddfs");
+        // console.log(res_response2.message, "fddfs");
         // setDemo(res_response2.message)
 
         const options = []
@@ -293,7 +315,7 @@ const Register = () => {
                                             </div>
 
                                             <div class="form_input">
-                                                <input name="phone" id="phone" type="tel" className={`form-control ${ponenumberIdErr ? " showError" : ""}`} onChange={handleChange} placeholder="Enter Pone NO" value={state.phone} />
+                                                <input name="phone" id="phone" maxLength="11" type="tel" className={`form-control ${ponenumberIdErr ? " showError" : ""}`} onChange={handleChange} placeholder="Enter Pone NO" value={state.phone} />
                                                 <div>
                                                     {ponenumberIdErr && (
                                                         <div
